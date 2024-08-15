@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MazeTeco</title>
+  </head>
+  <body>
+    <form id="login-form">
+      <input type="email" id="email" name="email" placeholder="email" />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="password"
+      />
+      <span>
+        Don't have an account?
+        <a id="link-register" href="/html/Authentication/register.html"
+          >Register</a
+        >
+      </span>
+      <button type="submit" id="login-btn">Login</button>
+      <div id="message"></div>
+    </form>
+
+    <script type="module" src="/js/views/AuthView.js"></script>
+  </body>
+</html>

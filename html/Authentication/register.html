@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MazeTeco - Sign Up</title>
+  </head>
+  <body>
+    <form id="register-form">
+      <input type="text" id="username" name="username" placeholder="username" />
+      <input type="email" id="email" name="email" placeholder="email" />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="password"
+      />
+      <select id="genrer" name="genrer">
+        <option value="Selecione o género">Selecione o género</option>
+        <option value="masculino">masculino</option>
+        <option value="feminino">feminino</option>
+      </select>
+      <input type="date" id="birthday" name="birthday" />
+      <select id="location" name="location">
+        <option value="Selecione a localidade">Selecione a localidade</option>
+        <option value="Aveiro">Aveiro</option>
+        <option value="Beja">Beja</option>
+        <option value="Braga">Braga</option>
+        <option value="Bragança">Bragança</option>
+        <option value="Castelo Branco">Castelo Branco</option>
+        <option value="Coimbra">Coimbra</option>
+        <option value="Évora">Évora</option>
+        <option value="Faro">Faro</option>
+        <option value="Guarda">Guarda</option>
+        <option value="Leiria">Leiria</option>
+        <option value="Lisboa">Lisboa</option>
+        <option value="Portalegre">Portalegre</option>
+        <option value="Porto">Porto</option>
+        <option value="Santarém">Santarém</option>
+        <option value="Setúbal">Setúbal</option>
+        <option value="Viana do Castelo">Viana do Castelo</option>
+        <option value="Vila Real">Vila Real</option>
+        <option value="Viseu">Viseu</option>
+      </select>
+      <span>
+        Already have an Account
+        <a id="link-login" href="/html/Authentication/login.html">Login</a>
+      </span>
+      <button type="submit" id="register-btn">Register</button>
+      <div id="message"></div>
+    </form>
+
+    <script type="module" src="/js/views/AuthView.js"></script>
+  </body>
+  </html>

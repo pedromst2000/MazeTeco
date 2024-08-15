@@ -1,0 +1,30 @@
+MazeTeco Conteúdos
+
+Will contain the following:
+- images 
+- svg
+- media (videos, gifs, audios, etc.)
+
+Alumni (Testemunhos)
+- Nuno Costa
+- Inês Reis
+- Diogo Fernandes
+- Goncalo Ribeiro
+- Raquel Silva
+
+Eventos
+- Gamifyit
+- Plug-In
+- Madjs
+- RAVE
+- Endpoints
+
+Reels/Projetos
+
+- Youtube dos teasers 
+
+Filtragem atividades
+- All
+- Testemunhos Alumni
+- Reels
+- Posters
