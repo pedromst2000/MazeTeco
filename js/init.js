@@ -33,6 +33,18 @@ function init() {
             isSelected: true,
             src: "../assets/images/avatars/avatar01.jpg",
           },
+          {
+            id: 3,
+            nameAlt: "avatar02",
+            isSelected: false,
+            src: "../assets/images/avatars/avatar02.jpg",
+          },
+          {
+            id: 4,
+            nameAlt: "avatar04",
+            isSelected: false,
+            src: "../assets/images/avatars/avatar04.jpg",
+          },
         ],
         points: 500,
         lives: 15,
@@ -50,7 +62,7 @@ function init() {
         genrer: "male",
         birthdate: "2000-11-05",
         location: "Vila do Conde",
-        selected_avatar: "../assets/images/avatars/avatar02.jpg",
+        selected_avatar: "../assets/images/avatars/avatar05.jpg",
         selected_banner: "../assets/images/Banner.png",
         avatars: [
           {
@@ -61,9 +73,15 @@ function init() {
           },
           {
             id: 2,
-            nameAlt: "avatar02",
+            nameAlt: "avatar05",
             isSelected: true,
-            src: "../assets/images/avatars/avatar02.jpg",
+            src: "../assets/images/avatars/avatar05.jpg",
+          },
+          {
+            id: 3,
+            nameAlt: "avatar06",
+            isSelected: false,
+            src: "../assets/images/avatars/avatar06.jpg",
           },
         ],
         points: 50,
@@ -136,38 +154,34 @@ function init() {
     const tags = [
       {
         id: 1,
-        tag: "All",
-      },
-      {
-        id: 2,
         tag: "UI|UX",
       },
       {
-        id: 3,
+        id: 2,
         tag: "Full-Stack",
       },
       {
-        id: 4,
+        id: 3,
         tag: "Front-End",
       },
       {
-        id: 5,
+        id: 4,
         tag: "Back-End",
       },
       {
-        id: 6,
+        id: 5,
         tag: "Mobile",
       },
       {
-        id: 7,
+        id: 6,
         tag: "Marketing Digital",
       },
       {
-        id: 8,
+        id: 7,
         tag: "Jogos Digitais",
       },
       {
-        id: 9,
+        id: 8,
         tag: "Outro",
       },
     ];
@@ -271,7 +285,7 @@ function init() {
         theme: "Dynamic Report Generator",
         description:
           "Este poster apresenta o projeto Dynamic Report Generator, desenvolvido por Diogo Teixeira durante o seu estágio curricular na Celfocus. O projeto foca-se na criação de uma ferramenta poderosa e flexível para a geração dinâmica de relatórios, adaptável a diversas necessidades empresariais. Utilizando tecnologias modernas como NodeJS, VueJS e Express, Diogo desenvolveu uma aplicação que permite aos utilizadores criar e personalizar relatórios em tempo real. Com uma interface intuitiva e funcionalidades robustas, o Dynamic Report Generator automatiza processos complexos de geração de relatórios, oferecendo soluções eficientes e personalizadas para a análise de dados.",
-        tag_id: 3,
+        tag_id: 2,
         category_id: 2,
       },
       {
@@ -284,7 +298,7 @@ function init() {
         theme: "Gestão de Riscos",
         description:
           "Este poster apresenta o trabalho desenvolvido por Alexandre Bessa durante o estágio curricular na Strongstep no ano letivo de 2022/2023, focado na reformulação da funcionalidade de Gestão de Riscos. Utilizando ferramentas como Figma para design, VSCode para desenvolvimento e Ruby on Rails para implementação, Alexandre criou uma solução eficiente para identificar, avaliar e mitigar riscos em projetos. O sistema inclui uma Lista de Riscos, onde são compiladas potenciais ameaças, uma Matriz de Risco que prioriza os riscos com base na probabilidade e impacto, e Estatísticas que apresentam gráficos de barras para uma visualização clara dos riscos. O projeto também integra Ações de Mitigação, Parâmetros Customizáveis para adaptar o sistema às necessidades específicas e um Histórico para acompanhar a evolução dos riscos ao longo do tempo. Com um design Responsivo, a ferramenta assegura acessibilidade e funcionalidade em diferentes dispositivos, exemplificando uma abordagem moderna e eficaz à gestão de riscos, crucial para o sucesso dos projetos.",
-        tag_id: 3,
+        tag_id: 2,
         category_id: 2,
       },
       {
@@ -297,7 +311,7 @@ function init() {
         theme: "Aplicação Móvel",
         description:
           'Este poster apresenta o projeto final desenvolvido por Pedro Teixeira no ano letivo de 2023/2024, na ESMAD, com o tema "Aplicação Móvel de Avaliação do Risco Cardiovascular". A aplicação tem como objetivo ajudar os utilizadores a monitorizar e melhorar a sua saúde cardiovascular através de várias funcionalidades. Entre elas, destaca-se a Literacia em Saúde, que oferece informações sobre higiene do sono, gestão do stress e combate ao sedentarismo, seguindo as orientações da OMS. A aplicação também inclui um Dashboard interativo que apresenta dados estatísticos detalhados sobre a evolução do risco cardiovascular e o progresso das atividades físicas do utilizador. Além disso, promove a Atividade Física com desafios e exercícios variados, como yoga, maratonas e musculação, acompanhados por um rastreamento preciso das atividades. Para complementar, há uma secção dedicada à Alimentação e Nutrição, que sugere dietas saudáveis como a Vegan, DASH e Mediterrânea, com receitas de sopas, pratos principais, saladas e sobremesas. O projeto foi desenvolvido utilizando ferramentas como Figma, VSCode, Typescript, React Native, Sequelize e ExpressJs, resultando numa aplicação robusta e intuitiva para a promoção de hábitos saudáveis e a redução do risco cardiovascular.',
-        tag_id: 3,
+        tag_id: 5,
         category_id: 2,
       },
     ];
@@ -318,7 +332,7 @@ function init() {
         year: 2024,
         description:
           "Prepare-se para uma revolução digital! Neste estágio na CustoJusto, Bernardo Ferreira mergulhou na Prototipagem de Interfaces e na Inovação da Dashboard da plataforma. Utilizando ferramentas de ponta como NextJS e Figma, Bernardo desenvolveu soluções inovadoras que elevam a experiência do utilizador a um novo nível. O projeto não só envolveu a criação de protótipos de interfaces que combinam estética e funcionalidade, mas também a implementação de um sistema de suporte ao cliente mais eficiente e a introdução de banners personalizados que potencializam a interação e conversão na plataforma.",
-        tag_id: 4,
+        tag_id: 3,
         category_id: 3,
       },
       {
@@ -331,7 +345,7 @@ function init() {
         year: 2023,
         description:
           "Este teaser apresenta o projeto de Ines Reis, realizado em 2022/2023 na Kendir Studios, que foca na criação de Recursos Educativos Digitais (RED) e na experiência dos alunos com Jogos Educativos. Em parceria com a Direção-Geral de Educação (DGE), foram desenvolvidos módulos interativos para salas de aula, com interfaces e ambientes 3D inovadores, visando promover a aprendizagem autónoma. O estágio centrou-se na implementação, avaliação e melhoria contínua desses recursos, garantindo sua eficácia e acessibilidade.",
-        tag_id: 2,
+        tag_id: 1,
         category_id: 3,
       },
       {
@@ -343,7 +357,31 @@ function init() {
         year: 2024,
         description:
           "Este teaser apresenta o projeto final de Pedro Teixeira, realizado em 2023/2024 na ESMAD. O projeto consiste numa aplicação móvel inovadora para a Avaliação do Risco Cardiovascular. Esta ferramenta combina literacia em saúde, com foco em hábitos como higiene do sono e gestão do stress, com um dashboard interativo que oferece uma análise detalhada do risco cardiovascular e do progresso da atividade física. A aplicação também inclui desafios de atividade física e orientações nutricionais, com receitas e dietas saudáveis, como Vegan, DASH e Mediterrânea. Desenvolvido com tecnologias como React Native, TypeScript e ExpressJS, este projeto visa proporcionar aos utilizadores uma abordagem holística e acessível para melhorar a saúde cardiovascular.",
-        tag_id: 3,
+        tag_id: 5,
+        category_id: 3,
+      },
+      {
+        id: 4,
+        videosrc:
+          "https://res.cloudinary.com/dvthg2763/video/upload/v1723741765/MazeTeco/dev/Teasers/40210313_BeatrizRodrigues_togoie.mp4",
+        title: "Interface e Interação",
+        company: "Kendir Studios",
+        year: 2024,
+        description:
+          'Este teaser apresenta o projeto de estágio de Beatriz Rodrigues, realizado em 2023/2024 na Kendir Studios. Focado em "Interface e Interação", o projeto envolve o design e desenvolvimento de animações UI para jogos educativos, bem como animações de ambiente e a criação de elementos de interface (UI). Este trabalho é fundamental para melhorar a experiência do utilizador, tornando-a mais envolvente e intuitiva, especialmente no contexto de jogos voltados para a educação. Beatriz combinou criatividade com técnicas avançadas de design para elevar a interação e a estética visual dos produtos da Kendir Studios.',
+        tag_id: 1,
+        category_id: 3,
+      },
+      {
+        id: 5,
+        videosrc:
+          "https://res.cloudinary.com/dvthg2763/video/upload/v1723741924/MazeTeco/dev/Teasers/TSIW_2023_AlexandreMagalhaes_jpahyg.mp4",
+        title: "Human Capital Management",
+        company: "Frejen Wise Solutions",
+        year: 2023,
+        description:
+          'Este teaser destaca o projeto de Alexandre Magalhães, realizado em 2022/2023 na Frejen Wise Solutions, focado no desenvolvimento de uma aplicação web de backoffice para gestão de Recursos Humanos. Intitulado "Human Capital Management", o projeto consiste no desenvolvimento de um SaaS que auxilia empresas a controlarem de forma eficiente todos os processos relacionados ao capital humano. A aplicação serve como uma ferramenta essencial para a administração e otimização de operações de RH, permitindo que as empresas gerenciem com precisão o seu recurso mais valioso: as pessoas.',
+        tag_id: 4,
         category_id: 3,
       },
     ];
