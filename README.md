@@ -1,2 +1,3 @@
 # MazeTeco-
-MazeCyber Web app about a Escape Room.
+
+MazeTeco is a web application for promoting the TSIW ESMAD course.
