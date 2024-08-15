@@ -85,7 +85,8 @@ function init() {
     const alumnis = [
       {
         id: 1,
-        photo: "../assets/images/Alumnis/alumni_InesReis.jpg",
+        photo:
+          "https://res.cloudinary.com/dvthg2763/image/upload/v1723655120/MazeTeco/dev/Alumni/photo-1678737276261-e9cfbeb9c999_1_mdxxt5.jpg",
         name: "Inês Reis",
         yearGrad: 2023,
         occupation: "UI Designer",
@@ -98,7 +99,8 @@ function init() {
       },
       {
         id: 2,
-        photo: "../assets/images/Alumnis/alumni_NunoCosta.jpg",
+        photo:
+          "https://res.cloudinary.com/dvthg2763/image/upload/v1723655163/MazeTeco/dev/Alumni/premium_photo-1672239496290-5061cfee7ebb_xv4wm0.jpg",
         name: "Nuno Costa",
         yearGrad: 2021,
         occupation: "Software Developer",
@@ -110,8 +112,9 @@ function init() {
         category_id: 4,
       },
       {
-        id: 2,
-        photo: "../assets/images/Alumnis/alumni_RaquelSilva.jpg",
+        id: 3,
+        photo:
+          "https://res.cloudinary.com/dvthg2763/image/upload/v1723655411/MazeTeco/dev/Alumni/photo-1499887142886-791eca5918cd_mtuvgz.jpg",
         name: "Raquel Silva",
         yearGrad: 2021,
         occupation: "Game Developer",
@@ -202,7 +205,8 @@ function init() {
     const events = [
       {
         id: 1,
-        photo: "../assets/images/Events/Gamifyit.png",
+        photo:
+          "https://res.cloudinary.com/dvthg2763/image/upload/v1723734973/MazeTeco/dev/Eventos/Gamifyit_ekypwo.png",
         title: "GamifyIt",
         logo: "../assets/svg/logos_events/GamifyItLogo.png",
         link: "https://eventos.esmad.ipp.pt/gamifyit/",
@@ -211,7 +215,8 @@ function init() {
       },
       {
         id: 2,
-        photo: "../assets/images/Events/Plug-in.png",
+        photo:
+          "https://res.cloudinary.com/dvthg2763/image/upload/v1723734974/MazeTeco/dev/Eventos/Plug-in_rcrury.png",
         title: "Plug-in",
         logo: "../assets/svg/logos_events/Plug-InLogo.png",
         link: "https://eventos.esmad.ipp.pt/plug-in/",
@@ -220,7 +225,8 @@ function init() {
       },
       {
         id: 3,
-        photo: "../assets/images/Events/MadJs.png",
+        photo:
+          "https://res.cloudinary.com/dvthg2763/image/upload/v1723734973/MazeTeco/dev/Eventos/MadJs_usulxy.png",
         title: "MadJs",
         logo: "../assets/svg/logos_events/madJSLogo.png",
         link: "https://eventos.esmad.ipp.pt/madjs/",
@@ -229,7 +235,8 @@ function init() {
       },
       {
         id: 4,
-        photo: "../assets/images/Events/Rave.png",
+        photo:
+          "https://res.cloudinary.com/dvthg2763/image/upload/v1723734975/MazeTeco/dev/Eventos/Rave_pwy88x.png",
         title: "Rave",
         logo: null,
         link: "https://www.esmad.ipp.pt/noticias/rave-2024",
@@ -238,7 +245,8 @@ function init() {
       },
       {
         id: 5,
-        photo: "../assets/images/Events/Endpoints.png",
+        photo:
+          "https://res.cloudinary.com/dvthg2763/image/upload/v1723734972/MazeTeco/dev/Eventos/Endpoints_cweaae.png",
         title: "Endpoints",
         logo: null,
         link: "https://www.esmad.ipp.pt/noticias/tsiw-endpoints-2",
@@ -255,7 +263,9 @@ function init() {
     const posters = [
       {
         id: 1,
-        photo: "../assets/images/Posters/Diogo Borges.jpg",
+        photo:
+          "https://res.cloudinary.com/dvthg2763/image/upload/v1723734394/MazeTeco/dev/Posters/Diogo_Borges_z3v0px.jpg",
+        download_name: "Diogo_Borges_z3v0px.jpg",
         company: "Celfocus",
         year: 2023,
         theme: "Dynamic Report Generator",
@@ -266,7 +276,9 @@ function init() {
       },
       {
         id: 2,
-        photo: "../assets/images/Posters/Alexandre_Bessa.png",
+        photo:
+          "https://res.cloudinary.com/dvthg2763/image/upload/v1723733233/MazeTeco/dev/Posters/Alexandre_Bessa_tniooe.png",
+        download_name: "Alexandre_Bessa_tniooe.png",
         company: "Strongstep",
         year: 2023,
         theme: "Gestão de Riscos",
@@ -277,7 +289,9 @@ function init() {
       },
       {
         id: 3,
-        photo: "../assets/images/Posters/40210465_PedroTeixeira.jpg",
+        photo:
+          "https://res.cloudinary.com/dvthg2763/image/upload/v1723731235/MazeTeco/dev/Posters/40210465_PedroTeixeira_so69se.jpg",
+        download_name: "40210465_PedroTeixeira_so69se.jpg",
         company: "ESMAD",
         year: 2024,
         theme: "Aplicação Móvel",
@@ -293,5 +307,47 @@ function init() {
 
   // Teasers
   if (!localStorage.teasers) {
+
+    const teasers = [
+      {
+        id: 1,
+        videosrc:
+          "https://res.cloudinary.com/dvthg2763/video/upload/v1723737515/MazeTeco/dev/Teasers/videoPromo_CustoJusto_woikax.mp4",
+        title: "Prototipagem de Interfaces",
+        company: "CustoJusto",
+        year: 2024,
+        description:
+          "Prepare-se para uma revolução digital! Neste estágio na CustoJusto, Bernardo Ferreira mergulhou na Prototipagem de Interfaces e na Inovação da Dashboard da plataforma. Utilizando ferramentas de ponta como NextJS e Figma, Bernardo desenvolveu soluções inovadoras que elevam a experiência do utilizador a um novo nível. O projeto não só envolveu a criação de protótipos de interfaces que combinam estética e funcionalidade, mas também a implementação de um sistema de suporte ao cliente mais eficiente e a introdução de banners personalizados que potencializam a interação e conversão na plataforma.",
+        tag_id: 4,
+        category_id: 3,
+      },
+      {
+        id: 2,
+        videosrc:
+          "https://res.cloudinary.com/dvthg2763/video/upload/v1723738735/MazeTeco/dev/Teasers/TSIW_2023_InesReis_sxyvgg.mp4",
+        title:
+          "Desenho de Recursos Educativos Digitais e experiência do aluno no uso de Jogos Educativos",
+        company: "Kendir Studios",
+        year: 2023,
+        description:
+          "Este teaser apresenta o projeto de Ines Reis, realizado em 2022/2023 na Kendir Studios, que foca na criação de Recursos Educativos Digitais (RED) e na experiência dos alunos com Jogos Educativos. Em parceria com a Direção-Geral de Educação (DGE), foram desenvolvidos módulos interativos para salas de aula, com interfaces e ambientes 3D inovadores, visando promover a aprendizagem autónoma. O estágio centrou-se na implementação, avaliação e melhoria contínua desses recursos, garantindo sua eficácia e acessibilidade.",
+        tag_id: 2,
+        category_id: 3,
+      },
+      {
+        id: 3,
+        videosrc:
+          "https://res.cloudinary.com/dvthg2763/video/upload/v1723738870/MazeTeco/dev/Teasers/40210465_PedroTeixeira_rbtimj.mp4",
+        title: "Aplicação móvel para avaliação do risco cardiovascular",
+        company: "ESMAD",
+        year: 2024,
+        description:
+          "Este teaser apresenta o projeto final de Pedro Teixeira, realizado em 2023/2024 na ESMAD. O projeto consiste numa aplicação móvel inovadora para a Avaliação do Risco Cardiovascular. Esta ferramenta combina literacia em saúde, com foco em hábitos como higiene do sono e gestão do stress, com um dashboard interativo que oferece uma análise detalhada do risco cardiovascular e do progresso da atividade física. A aplicação também inclui desafios de atividade física e orientações nutricionais, com receitas e dietas saudáveis, como Vegan, DASH e Mediterrânea. Desenvolvido com tecnologias como React Native, TypeScript e ExpressJS, este projeto visa proporcionar aos utilizadores uma abordagem holística e acessível para melhorar a saúde cardiovascular.",
+        tag_id: 3,
+        category_id: 3,
+      },
+    ];
+
+     localStorage.setItem("teasers", JSON.stringify(teasers));
   }
 }
