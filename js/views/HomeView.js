@@ -48,10 +48,13 @@ function homeView() {
         }
       `;
 
-  // document.querySelector("#logout").onclick = () => {
-  //   User.logout();
-  //   location.reload();
-  // };
+        document.querySelector("#logout")  ?
+  document.querySelector("#logout").onclick = () => {
+    User.logout();
+    location.reload();
+  } : null;
+
+        
 }
 
 homeView();

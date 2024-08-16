@@ -88,7 +88,8 @@ export default class User {
     level = 1,
     role = "regular",
     isBlocked = false,
-    member_since = new Date().toLocaleDateString() // default value of current date
+    member_since = new Date().toISOString().slice(0, 10) + "T" + new Date().toISOString().slice (11, 19) + "Z"
+
   ) {
     this.username = username;
     this.password = password;

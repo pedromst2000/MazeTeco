@@ -1,10 +1,7 @@
 import User from "../classes/User.js";
-import {
-  countMemberDays
-} from "../utils/index.js";
-
 
 let users;
+
 
 /**
  * @function init
@@ -53,15 +50,13 @@ export function register(
       email,
       genrer,
       birthdate,
-      location,
+      location
     );
 
-    users.push(
-      {
-        id: users.length + 1,
-        ...user,
-      }
-    );
+    users.push({
+      id: users.length + 1,
+      ...user,
+    });
 
     localStorage.setItem("users", JSON.stringify(users));
   }

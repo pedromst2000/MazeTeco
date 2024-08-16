@@ -1,10 +1,8 @@
 import * as User from "../models/UserModel.js";
-import {
-  isValidEmail,
-  isvalidUsername,
-  isValidPassword,
-  displayMessage,
-} from "../utils/index.js";
+import { isValidEmail } from "../utils/isValidEmail.js";
+import { isvalidUsername } from "../utils/isvalidUsername.js";
+import { isValidPassword } from "../utils/isValidPassword.js";
+import { displayMessage } from "../utils/displayMessage.js";
 
 /**
  * @function authView
