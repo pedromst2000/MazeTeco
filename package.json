@@ -1,0 +1,23 @@
+{
+	"name": "mazeteco",
+	"version": "1.0.0",
+	"description": "MazeTeco is a web application for promoting the TSIW ESMAD course.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prettier": "prettier --write .",
+		"prettier-check": "prettier --check ."
+	},
+	"keywords": [],
+	"author": "Pedro Teixeira",
+	"license": "ISC",
+	"type": "module",
+	"dependencies": {},
+	"devDependencies": {
+		"eslint": "^9.9.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-jsdoc": "^50.2.2",
+		"eslint-plugin-prettier": "^5.2.1",
+		"prettier": "^3.3.3"
+	}
+}
