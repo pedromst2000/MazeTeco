@@ -6,18 +6,18 @@
  */
 
 export default class Tag {
-  tag = "";
+	tag = "";
 
-  /**
-   * @description Creates an instance of Tag
-   * @param {string} tag - The name of the tag.
-   * @memberof Tag
-   * @constructs Tag
-   * @returns {Tag}
-   *
-   */
+	/**
+	 * @description Creates an instance of Tag
+	 * @param {string} tag - The name of the tag.
+	 * @memberof Tag
+	 * @constructs Tag
+	 * @returns {Tag}
+	 *
+	 */
 
-  constructor(tag) {
-    this.tag = tag;
-  }
+	constructor(tag) {
+		this.tag = tag;
+	}
 }

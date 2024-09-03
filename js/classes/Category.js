@@ -6,18 +6,18 @@
  */
 
 export default class Category {
-  category = "";
+	category = "";
 
-  /**
-   * @description Creates an instance of Category
-   * @param {string} category - The name of the category.
-   * @memberof Category
-   * @constructs Category
-   * @returns {Category}
-   *
-   */
+	/**
+	 * @description Creates an instance of Category
+	 * @param {string} category - The name of the category.
+	 * @memberof Category
+	 * @constructs Category
+	 * @returns {Category}
+	 *
+	 */
 
-  constructor(category) {
-    this.category = category;
-  }
+	constructor(category) {
+		this.category = category;
+	}
 }

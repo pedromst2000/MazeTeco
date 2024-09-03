@@ -6,11 +6,11 @@
  */
 
 export function isValidEmail(email) {
-  const validFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	const validFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if (!validFormat.test(email)) {
-    throw new Error(`O email deve ser válido e conter pelo menos um @ e um .`);
-  }
+	if (!validFormat.test(email)) {
+		throw new Error(`O email deve ser válido e conter pelo menos um @ e um .`);
+	}
 
-  return validFormat.test(email);
+	return validFormat.test(email);
 }

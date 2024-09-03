@@ -1,7 +1,14 @@
 import User from "../classes/User.js";
+import { countMemberTime } from "../utils/countMemberDays.js";
+import { ENV } from "../../ENV.js";
 
 let users;
 
+const { HASH_PASSWORD_KEY } = ENV;
+
+console.log(HASH_PASSWORD_KEY);
+
+console.log(countMemberTime(`2024-08-16T15:41:11Z`));
 
 /**
  * @function init
@@ -10,7 +17,7 @@ let users;
  */
 
 export function init() {
-  users = localStorage.getItem("users") ? JSON.parse(localStorage.users) : [];
+	users = localStorage.getItem("users") ? JSON.parse(localStorage.users) : [];
 }
 
 /**
@@ -22,44 +29,28 @@ export function init() {
  * @param {string} genrer - The genrer of the user
  * @param {string} birthdate - The birthdate of the user
  * @param {string} location - The location of the user
- * @param {string} member_since - The date the user joined the platform
  * @returns {void}
  */
 
-export function register(
-  username,
-  password,
-  email,
-  genrer,
-  birthdate,
-  location,
-  member_since
-) {
-  // checking if the username already exists
-  if (users.some((u) => u.username === username)) {
-    throw new Error(`The username already exists.`);
-  }
+export function register(username, password, email, genrer, birthdate, location) {
+	// checking if the username already exists
+	if (users.some((u) => u.username === username)) {
+		throw new Error(`The username already exists.`);
+	}
 
-  // checking if the email already exists
-  if (users.some((u) => u.email === email)) {
-    throw new Error(`The email already exists.`);
-  } else {
-    const user = new User(
-      username,
-      password,
-      email,
-      genrer,
-      birthdate,
-      location
-    );
+	// checking if the email already exists
+	if (users.some((u) => u.email === email)) {
+		throw new Error(`The email already exists.`);
+	} else {
+		const user = new User(username, password, email, genrer, birthdate, location);
 
-    users.push({
-      id: users.length + 1,
-      ...user,
-    });
+		users.push({
+			id: users.length + 1,
+			...user,
+		});
 
-    localStorage.setItem("users", JSON.stringify(users));
-  }
+		localStorage.setItem("users", JSON.stringify(users));
+	}
 }
 
 /**
@@ -71,20 +62,20 @@ export function register(
  */
 
 export function login(email, password) {
-  // finding an email
-  const user = users.find((u) => u.email === email);
+	// finding an email
+	const user = users.find((u) => u.email === email);
 
-  if (!user) {
-    throw new Error(`The email doesn't exist.`);
-  }
+	if (!user) {
+		throw new Error(`The email doesn't exist.`);
+	}
 
-  if (user.password !== password) {
-    throw new Error(`The password is incorrect.`);
-  }
+	if (user.password !== password) {
+		throw new Error(`The password is incorrect.`);
+	}
 
-  sessionStorage.setItem("loggedUser", JSON.stringify(user));
+	sessionStorage.setItem("loggedUser", JSON.stringify(user));
 
-  return true;
+	return true;
 }
 
 /**
@@ -94,7 +85,7 @@ export function login(email, password) {
  */
 
 export function logout() {
-  sessionStorage.removeItem("loggedUser");
+	sessionStorage.removeItem("loggedUser");
 }
 
 /**
@@ -104,7 +95,7 @@ export function logout() {
  */
 
 export function getLoggedUser() {
-  return JSON.parse(sessionStorage.loggedUser);
+	return JSON.parse(sessionStorage.loggedUser);
 }
 
 /**
@@ -115,5 +106,5 @@ export function getLoggedUser() {
  */
 
 export function isLogged() {
-  return !!sessionStorage.loggedUser; // !! converts the value to a boolean true or false
+	return !!sessionStorage.loggedUser; // !! converts the value to a boolean true or false
 }

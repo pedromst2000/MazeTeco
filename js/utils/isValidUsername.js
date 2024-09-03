@@ -6,13 +6,13 @@
  */
 
 export function isvalidUsername(username) {
-  const validFormat = /^[a-zA-Z0-9]{5,}$/;
+	const validFormat = /^[a-zA-Z0-9]{5,}$/;
 
-  if (!validFormat.test(username)) {
-    throw new Error(
-      `Username deve ser pelo menos 5 caracteres e conter apenas letras e números.`
-    );
-  }
+	if (!validFormat.test(username)) {
+		throw new Error(
+			`Username deve ser pelo menos 5 caracteres e conter apenas letras e números.`,
+		);
+	}
 
-  return validFormat.test(username);
+	return validFormat.test(username);
 }

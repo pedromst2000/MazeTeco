@@ -7,21 +7,21 @@ import * as User from "../models/UserModel.js";
  */
 
 function homeView() {
-  User.init();
+	User.init();
 
-  document.querySelector("#home").innerHTML = `
+	document.querySelector("#home").innerHTML = `
       <h1>Welcome to MazeTeco</h1>
         ${
-          User.isLogged()
-            ? `
+					User.isLogged()
+						? `
                 <div>
                 <h2>Profile</h2>
                 <img src="${User.getLoggedUser().selected_avatar}" alt="
                 ${
-                  User.getLoggedUser().avatars.find(
-                    (a) => a.src === User.getLoggedUser().selected_avatar
-                  ).nameAlt
-                }
+									User.getLoggedUser().avatars.find(
+										(a) => a.src === User.getLoggedUser().selected_avatar,
+									).nameAlt
+								}
                 " />
                 <p>Username: ${User.getLoggedUser().username}</p>
                 <p>Email: ${User.getLoggedUser().email}</p>
@@ -36,7 +36,7 @@ function homeView() {
               
                 <button id="logout">Logout</button>
                 `
-            : `
+						: `
     
       <button value="Sign Up">
         <a href="/html/Authentication/register.html">Sign Up</a>
@@ -45,16 +45,15 @@ function homeView() {
         <a href="/html/Authentication/login.html">Sign In</a>
       </button>
               `
-        }
+				}
       `;
 
-        document.querySelector("#logout")  ?
-  document.querySelector("#logout").onclick = () => {
-    User.logout();
-    location.reload();
-  } : null;
-
-        
+	document.querySelector("#logout")
+		? (document.querySelector("#logout").onclick = () => {
+				User.logout();
+				location.reload();
+			})
+		: null;
 }
 
 homeView();

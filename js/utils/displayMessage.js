@@ -8,12 +8,12 @@
  */
 
 export function displayMessage(element, message, type) {
-  const divMessage = document.querySelector(element);
-  divMessage.innerHTML = `
+	const divMessage = document.querySelector(element);
+	divMessage.innerHTML = `
     <div class="auth-message-${type}">${message}</div>
 `;
 
-  setTimeout(() => {
-    divMessage.innerHTML = "";
-  }, 2000);
+	setTimeout(() => {
+		divMessage.innerHTML = "";
+	}, 2000);
 }
