@@ -1,10 +1,11 @@
-init();
-
+import { encrypt } from "./utils/hashPassword.js";
 /**
  * @description Initialize the application
  * @function init
  * @returns {void}
  */
+
+init();
 
 function init() {
 	// Users
@@ -13,37 +14,37 @@ function init() {
 			{
 				id: 1,
 				username: "admin",
-				password: "123admin",
+				password: encrypt("123admin"),
 				email: "admin@hotmail.com",
 				genrer: "male",
 				birthdate: "1994-05-13",
 				location: "Vila Nova de Gaia",
-				selected_avatar: "..src/assets/images/avatars/avatar01.jpg",
-				selected_banner: "..src/assets/images/Banner.png",
+				selected_avatar: "/assets/images/avatars/avatar01.jpg",
+				selected_banner: "/assets/images/Banner.png",
 				avatars: [
 					{
 						id: 1,
 						nameAlt: "default_avatar",
 						isSelected: false,
-						src: "..src/assets/images/avatars/default_male.png",
+						src: "/assets/images/avatars/default_male.png",
 					},
 					{
 						id: 2,
 						nameAlt: "avatar01",
 						isSelected: true,
-						src: "..src/assets/images/avatars/avatar01.jpg",
+						src: "/assets/images/avatars/avatar01.jpg",
 					},
 					{
 						id: 3,
 						nameAlt: "avatar02",
 						isSelected: false,
-						src: "..src/assets/images/avatars/avatar02.jpg",
+						src: "/assets/images/avatars/avatar02.jpg",
 					},
 					{
 						id: 4,
 						nameAlt: "avatar04",
 						isSelected: false,
-						src: "..src/assets/images/avatars/avatar04.jpg",
+						src: "/assets/images/avatars/avatar04.jpg",
 					},
 				],
 				points: 500,
@@ -57,31 +58,31 @@ function init() {
 			{
 				id: 2,
 				username: "pedromst",
-				password: "123pedro",
+				password: encrypt("123pedro"),
 				email: "pedromst@hotmail.com",
 				genrer: "male",
 				birthdate: "2000-11-05",
 				location: "Vila do Conde",
-				selected_avatar: "..src/assets/images/avatars/avatar05.jpg",
-				selected_banner: "..src/assets/images/Banner.png",
+				selected_avatar: "/assets/images/avatars/avatar05.jpg",
+				selected_banner: "/assets/images/Banner.png",
 				avatars: [
 					{
 						id: 1,
 						nameAlt: "default_avatar",
 						isSelected: false,
-						src: "..src/assets/images/avatars/default_male.png",
+						src: "/assets/images/avatars/default_male.png",
 					},
 					{
 						id: 2,
 						nameAlt: "avatar05",
 						isSelected: true,
-						src: "..src/assets/images/avatars/avatar05.jpg",
+						src: "/assets/images/avatars/avatar05.jpg",
 					},
 					{
 						id: 3,
 						nameAlt: "avatar06",
 						isSelected: false,
-						src: "..src/assets/images/avatars/avatar06.jpg",
+						src: "/assets/images/avatars/avatar06.jpg",
 					},
 				],
 				points: 50,

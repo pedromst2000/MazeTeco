@@ -29,7 +29,7 @@ function authView() {
 
 				try {
 					if (!email || !password) {
-						throw new Error("Please fill in all the fields.");
+						throw new Error("Preencha todos os campos.");
 					}
 
 					if (!isValidEmail(email)) {
@@ -41,13 +41,13 @@ function authView() {
 					}
 
 					User.login(email, password);
-					displayMessage("#message", "You have successfully logged in.", "success");
+					displayMessage("#message", "Login com Successo!", "success");
 					setTimeout(() => {
 						location.reload();
 					}, 5500);
 
 					setTimeout(() => {
-						location.href = "/index.html";
+						location.href = "/html/index.html";
 					}, 1500);
 				} catch (e) {
 					displayMessage("#message", e.message, "error");
@@ -72,7 +72,7 @@ function authView() {
 						!birthdate ||
 						_location_ === "Selecione a localidade"
 					) {
-						throw new Error("Please fill in all the fields.");
+						throw new Error("Preencha todos os campos.");
 					}
 
 					if (!isValidEmail(email)) {
@@ -89,14 +89,14 @@ function authView() {
 					console.log(
 						User.register(username, password, email, genrer, birthdate, _location_),
 					);
-					displayMessage("#message", "You have successfully registered.", "success");
+					displayMessage("#message", "Registado com Sucesso", "success");
 					setTimeout(() => {
 						location.reload();
 					}, 5500);
 
 					setTimeout(
 						() => {
-							location.href = "/index.html";
+							location.href = "html/Authentication/login.html";
 						},
 
 						1500,

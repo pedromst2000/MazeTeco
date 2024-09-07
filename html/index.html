@@ -5,19 +5,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>MazeTeco</title>
 		<link rel="icon" href="../assets/svg/Icon.svg" />
+		<link rel="stylesheet" href="../css/Navbar.css" />
 	</head>
 	<body>
-		<main id="home">
+		<!-- Navbar -->
+		<header id="nav-bar">
+			<!-- injetado via JS -->
+		</header>
+		<main id="home" class="hidden">
 			<h1>Welcome to MazeTeco</h1>
-			<button value="Sign Up">
-				<a href="../html/Authentication/register.html">Sign Up</a>
-			</button>
-			<button value="Sign In">
-				<a href="../html/Authentication/login.html">Sign In</a>
-			</button>
-		</main>
-	</body>
 
-	<script src="../js/init.js"></script>
-	<script type="module" src="../js/views/HomeView.js"></script>
+			<p class="oswald-regular">Hello World</p>
+
+			<p class="oswald-medium">Hello World</p>
+
+			<p class="oswald-bold">Hello World</p>
+		</main>
+
+		<!-- Ensure that init.js is loaded first -->
+		<script type="module" src="../js/init.js"></script>
+		<script type="module" src="../js/views/NavBarView.js"></script>
+		<script type="module" src="../js/views/HomeView.js"></script>
+	</body>
 </html>

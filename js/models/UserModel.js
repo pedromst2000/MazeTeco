@@ -1,14 +1,6 @@
 import User from "../classes/User.js";
-import { countMemberTime } from "../utils/countMemberDays.js";
-import { ENV } from "../../ENV.js";
-
+import { encrypt, compare } from "../utils/hashPassword.js";
 let users;
-
-const { HASH_PASSWORD_KEY } = ENV;
-
-console.log(HASH_PASSWORD_KEY);
-
-console.log(countMemberTime(`2024-08-16T15:41:11Z`));
 
 /**
  * @function init
@@ -35,12 +27,12 @@ export function init() {
 export function register(username, password, email, genrer, birthdate, location) {
 	// checking if the username already exists
 	if (users.some((u) => u.username === username)) {
-		throw new Error(`The username already exists.`);
+		throw new Error(`O username já existe.`);
 	}
 
 	// checking if the email already exists
 	if (users.some((u) => u.email === email)) {
-		throw new Error(`The email already exists.`);
+		throw new Error(`O email já existe.`);
 	} else {
 		const user = new User(username, password, email, genrer, birthdate, location);
 
@@ -66,11 +58,13 @@ export function login(email, password) {
 	const user = users.find((u) => u.email === email);
 
 	if (!user) {
-		throw new Error(`The email doesn't exist.`);
+		throw new Error(`O email não existe.`);
 	}
 
-	if (user.password !== password) {
-		throw new Error(`The password is incorrect.`);
+	const doPasswordsMatch = compare(password, user.password);
+
+	if (!doPasswordsMatch) {
+		throw new Error(`Password inválida.`);
 	}
 
 	sessionStorage.setItem("loggedUser", JSON.stringify(user));
@@ -95,7 +89,9 @@ export function logout() {
  */
 
 export function getLoggedUser() {
-	return JSON.parse(sessionStorage.loggedUser);
+	const user = sessionStorage.loggedUser;
+
+	return user ? JSON.parse(user) : null;
 }
 
 /**
