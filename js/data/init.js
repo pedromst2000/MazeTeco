@@ -1,4 +1,4 @@
-import { encrypt } from "./utils/hashPassword.js";
+import { encrypt } from "../utils/hashPassword.js";
 /**
  * @description Initialize the application
  * @function init
@@ -176,7 +176,7 @@ function init() {
 				yearGrad: 2023,
 				occupation: "UI Designer",
 				testimony:
-					" digo, de coração cheio, que os três anos na licenciatura foram transformadores",
+					"Digo, de coração cheio, que os três anos na licenciatura foram transformadores",
 				description:
 					'Inês Reis, alumnus da Licenciatura em Tecnologias e Sistemas de Informação para a Web, frequenta atualmente, o Mestrado em Sistemas e Media Interativos da ESMAD. Citando a Inês "digo, de coração cheio, que os três anos na licenciatura foram transformadores". Inicialmente sem rumo, descobriu a sua paixão: o Design da Experiência do Utilizador e de Interfaces. "A licenciatura, elogiada por muitos conhecidos pelas suas competências abrangentes, proporcionou-me não apenas formação profissional, mas também experiências académicas que nunca vou esquecer". Inês fez o seu estágio na Kendir Studios, onde desempenhou o papel de Gestora de Projetos e UX Designer. Da altura do estágio, destaca a criação do recurso educativo digital Fibonacci e o Número de Ouro, premiado pela Direção-Geral de Educação. Realça, igualmente, as pilotagens em escolas de diversos concelhos, desde Vila Nova de Gaia a Sintra, para o Recurso Educativo Digital de "Sustentabilidade", onde teve a oportunidade de estudar várias turmas de diferentes anos, desde o 7.º ao 9.º ano. Finalizou o estágio com o que, segundo a própria, foi a sua maior conquista até aos dias de hoje: pela primeira vez, na história do curso, obteve 20 valores no estágio. Inês Reis integrará a equipa da MOG Technologies, como Gestora de Projetos de Inovação, o que dará seguimento ao seu percurso profissional.',
 				tag_id: 2,
@@ -204,7 +204,7 @@ function init() {
 				yearGrad: 2021,
 				occupation: "Game Developer",
 				testimony:
-					"a passagem pela ESMAD e pela Licenciatura em Tecnologias e Sistemas de Informação para a Web proporcionou-me o ingresso no mercado de trabalho e neste mundo do desenvolvimento dos jogos educativos, na qual realizo atualmente a minha vida profissional",
+					"A passagem pela ESMAD e pela Licenciatura em Tecnologias e Sistemas de Informação para a Web proporcionou-me o ingresso no mercado de trabalho e neste mundo do desenvolvimento dos jogos educativos, na qual realizo atualmente a minha vida profissional",
 				description:
 					'Raquel Silva é alumna da Licenciatura em Tecnologias e Sistemas de Informação para a Web. Atualmente, trabalha como Game Development & Implementation na Kendir Studios. A sua relação com a empresa, onde atualmente desempenha funções, surgiu em contexto de estágio curricular. Raquel conheceu a Kendir através do evento anual Plug-in, promovido pela ESMAD, e que promove uma ligação entre entidades e empresas. "Foi nesse evento que conheci a Kendir Studios e o projeto proposto, que passava pelo desenvolvimento de jogos educativos que promovessem a aprendizagem da matemática e das ciências". Quando ingressou na Kendir, surgiu o projeto Liber Domus, um jogo educativo com aventuras, ao estilo RPG (Role Playing Game), em que o jogador se diverte melhorando a sua personagem, interagindo com pessoas e ambientes, conquistando objetivos e recompensas. As aventuras permitem manter o jogador focado na história e consequentemente, na aprendizagem. Com este jogo educativo procurou-se promover um estudo mais divertido e interativo, motivando o estudante a envolver-se mais no seu processo de aprendizagem e aumentando o seu interesse em saber mais. Sendo um projeto com origem na academia, o primeiro prémio - Born For Knowledge Ideas -, galardoou o conceito e o seu potencial de mercado. Procurando criar jogos educativos com impacto, os vários projetos desenvolvidos foram já premiados como finalistas do DigiEduHack 2021 e do Resilience Games 2022. A equipa e o seu modus operandi foi ainda acreditada pela ANI, como inovadora no ramo das indústrias criativas, sendo agora finalista do Born for Knowledge Rise 2022. Segundo Raquel, "a passagem pela ESMAD e pela Licenciatura em Tecnologias e Sistemas de Informação para a Web proporcionou-me o ingresso no mercado de trabalho e neste mundo do desenvolvimento dos jogos educativos, na qual realizo atualmente a minha vida profissional".',
 				tag_id: 8,
