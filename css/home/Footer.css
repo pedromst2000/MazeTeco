@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+:root {
+	--primary-color: #e9f0fd;
+	--secondary-color: #0c2c7e;
+	--accent-color: #a3cb38;
+	--accent-color-light: #d4edb5;
+	--dark-color: #0000;
+}
+
+footer {
+	background-color: var(--secondary-color);
+	font-family: "Oswald", system-ui;
+	color: var(--primary-color);
+    margin-top: 8em;
+}
+
+footer a {
+	color: var(--primary-color);
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+footer a:hover {
+	color: var(--accent-color);
+}
+
+.top-container {
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem;
+	flex-wrap: wrap;
+}
+
+.links-container,
+.social-media-container,
+.events-container,
+.help-container,
+.contacts-container {
+	flex: 1;
+	margin: 0 1rem;
+}
+
+.links ul,
+.links li,
+.contacts span {
+	list-style: none;
+	margin-bottom: 0.5rem;
+}
+
+.header span {
+	font-weight: bold;
+	font-size: 1.2rem;
+	color: var(--primary-color);
+	margin-bottom: 1rem;
+	display: block;
+}
+
+.contacts-container .contacts {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.line-container {
+	display: flex;
+	justify-content: center;
+	margin: 2rem 0;
+    position: relative;
+    bottom: 2em;
+}
+
+.line {
+	background-color: var(--primary-color);
+	width: 90rem;
+	height: 2px;
+	border-radius: 50px;
+}
+
+
+.bottom-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2.5rem;
+	flex-wrap: wrap;
+    position: relative;
+    bottom: 2em;
+}
+
+.bottom-container .logo img {
+	height: 30px;
+}
+
+.bottom-container .terms {
+	font-size: 0.8rem;
+	color: var(--primary-color);
+}
+
+.bottom-container .terms a {
+	color: var(--primary-color);
+}
+
+.bottom-container .social-media {
+	display: flex;
+	gap: 1rem;
+}
+
+.bottom-container .social-media div img {
+	width: 24px;
+	height: 24px;
+}
+
+.main-links-container .links ul li a {
+	font-weight: 100;
+	letter-spacing: 1.5px;
+	font-size: 0.9rem;
+}
+
+footer .top-container .header {
+	letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.social-media-container .links ul li a {
+	font-size: 0.9rem;
+	letter-spacing: 1.5px;
+	font-weight: 100;
+}
+
+.events-container .links ul li a {
+	font-size: 0.9rem;
+	letter-spacing: 1.5px;
+	font-weight: 100;
+}
+
+.help-container .links ul li a {
+	font-size: 0.9rem;
+	letter-spacing: 1.5px;
+	font-weight: 100;
+}
+
+.contacts-container .contacts span {
+	font-size: 0.9rem;
+	letter-spacing: 1.5px;
+	font-weight: 100;
+}
+
+.bottom-container .terms {
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+}
+
+.terms .author {
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 425px) {
+    
+
+    body{
+        height: 100vh;
+    }
+
+    footer{
+        height: 150vh;
+        position: relative;
+        bottom: 15em;
+    }
+    
+    .top-container {
+        padding: 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .links-container,
+    .social-media-container,
+    .events-container,
+    .help-container,
+    .contacts-container {
+        margin: 1rem 0;
+    }
+
+    .links ul,
+    .links li,
+    .contacts span {
+        margin-bottom: 0.5rem;
+    }
+
+    .header span {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .contacts-container .contacts {
+        gap: 1rem;
+    }
+
+    .line-container {
+        margin: 1rem 0;
+        margin-top: 1.7rem;
+    }
+
+    .line {
+        width: 80%;
+    }
+
+    .bottom-container {
+        padding: 1rem 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .bottom-container .logo img {
+        height: 20px;
+    }
+
+    .bottom-container .terms {
+        font-size: 0.7rem;
+    }
+
+    .bottom-container .social-media div img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .main-links-container .links ul li a {
+        font-size: 0.8rem;
+    }
+
+    footer .top-container .header {
+        font-size: 1rem;
+    }
+
+    .social-media-container .links ul li a {
+        font-size: 0.8rem;
+    }
+
+    .events-container .links ul li a {
+        font-size: 0.8rem;
+    }
+
+    .help-container .links ul li a {
+        font-size: 0.8rem;
+    }
+
+    .contacts-container .contacts span {
+        font-size: 0.8rem;
+    }
+
+    .bottom-container .terms {
+        font-size: 0.7rem;
+    }
+
+    .terms .author {
+        font-size: 0.7rem;
+    }
+}

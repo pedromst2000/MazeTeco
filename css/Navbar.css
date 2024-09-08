@@ -95,6 +95,7 @@
 
 .auth-links-mobile {
 	display: none;
+	z-index: 100;
 }
 
 /* ---------------------LOGGED NAVBAR ---------------------------------- */
@@ -180,6 +181,7 @@ ul {
 	position: absolute;
 	top: 70px;
 	right: 40px;
+	z-index: 100;
 }
 
 .dropdown-list {
@@ -230,6 +232,16 @@ ul {
 
 .links-mobile {
 	display: none;
+	z-index: 100;
+}
+
+.dropdown-link a.active {
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+}
+
+.links-mobile.open {
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* -------------------RESPONSIVE NAVBAR ----------------------------------- */
@@ -262,11 +274,10 @@ ul {
 
 /* Small Mobile */
 @media only screen and (min-width: 300px) and (max-width: 425px) {
-	
-	img.logo{
+	img.logo {
 		width: 100px;
 	}
-	
+
 	#hamburguer-logged-toggle {
 		display: block;
 		border: none;

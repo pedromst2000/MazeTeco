@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&display=swap");
+
+:root {
+	--primary-color: #e9f0fd;
+	--secondary-color: #0c2c7e;
+	--accent-color: #a3cb38;
+	--dark-color: #0000;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.image-container {
+	position: relative;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.image-container img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 3.5px solid var(--secondary-color);
+}
+
+.image-container::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease-in-out;
+}
+
+.image-container:hover::before {
+	opacity: 0;
+}
+
+.testimonials-section .heading-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.testimonials-section .heading-container h1 {
+	font-family: "libre caslon text", system-ui;
+	font-weight: 900;
+	font-size: 2.2rem;
+	color: var(--secondary-color);
+	text-align: center;
+	padding: 2rem 0;
+}
+
+.testimonials-section .sub-heading {
+	font-family: "Oswald", system-ui;
+	font-weight: 300;
+	font-size: 1.2rem;
+	color: var(--secondary-color);
+	text-align: center;
+	position: relative;
+	top: -2rem;
+}
+
+.testimonials-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+	color: var(--secondary-color);
+	font-family: "Oswald", system-ui;
+	padding-top: 4rem;
+	flex-wrap: wrap;
+}
+
+.testimonial .name {
+	font-size: 22px;
+	font-weight: 800;
+	letter-spacing: 1px;
+}
+
+.testimonial .occupation {
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+
+.testimonial .year-grad {
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+.testimonial .first-letter {
+	font-size: 2.5rem;
+	font-weight: 300;
+}
+
+.testimonial .rest-of-text {
+	font-weight: 300;
+	font-size: 14px;
+}
+.testimonial .quote {
+	font-size: 3rem;
+	font-weight: 300;
+}
+
+.testimonial .text-section {
+	line-height: 0.9;
+	padding: 1rem;
+	width: 13rem;
+}
+
+.testimonial .first-section {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 3rem;
+}
+
+.testimonial .right-side {
+	padding-top: 2rem;
+}
+
+.testimonial .left-side {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.testimonial {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+button.cta-button-alumni {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 20px;
+	padding: 6px 20px;
+	background-color: var(--accent-color);
+	font-size: 15px;
+	font-family: "Oswald", system-ui;
+	color: var(--secondary-color);
+	text-transform: uppercase;
+}
+
+.testimonials-container .cta-button-alumni {
+	margin-top: 1rem;
+}
+
+.testimonials-container a {
+	text-decoration: none;
+}
+
+button.cta-button-alumni:hover {
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+}
+
+.testimonial {
+	background-color: var(--primary-color);
+	padding: 1rem;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+	transition: box-shadow 0.2s ease-in-out;
+	transition: transform 0.2s ease-in-out;
+}
+
+.testimonial:hover {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+	transform: scale(1.08);
+}
+
+/* 4K RESOLUTION */
+@media only screen and (min-width: 2000px) and (max-width: 3000px) {
+	.testimonials-section .heading-container h1 {
+		font-size: 3.2rem;
+	}
+
+	.testimonials-section .sub-heading {
+		font-size: 1.6rem;
+	}
+
+	.testimonials-container {
+		padding-top: 6rem;
+	}
+
+	.testimonial .name {
+		font-size: 2.5rem;
+	}
+
+	.testimonial .occupation {
+		font-size: 1.6rem;
+	}
+
+	.testimonial .year-grad {
+		font-size: 1.6rem;
+	}
+
+	.testimonial .first-letter {
+		font-size: 3.5rem;
+	}
+
+	.testimonial .rest-of-text {
+		font-size: 1.6rem;
+	}
+
+	.testimonial .quote {
+		font-size: 4rem;
+	}
+
+	.testimonial .text-section {
+		padding: 1.5rem;
+		width: 15rem;
+	}
+
+	.testimonials-container .cta-button-alumni {
+		margin-top: 2rem;
+	}
+
+	.testimonial {
+		padding: 1.5rem;
+		border-radius: 15px;
+	}
+
+	button.cta-button-alumni {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		cursor: pointer;
+		font-weight: bold;
+		text-decoration: none;
+		border-radius: 20px;
+		padding: 16px 30px;
+		background-color: var(--accent-color);
+		font-size: 18px;
+		font-family: "Oswald", system-ui;
+		color: var(--secondary-color);
+		text-transform: uppercase;
+	}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1300px) {
+	.testimonials-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.testimonials-section .heading-container h1 {
+		font-size: 2.5rem;
+	}
+
+	.testimonials-section .sub-heading {
+		font-size: 1.4rem;
+	}
+
+	.testimonials-container {
+		padding-top: 5rem;
+	}
+
+	.testimonial .name {
+		font-size: 1.2rem;
+	}
+
+	.testimonial .occupation {
+		font-size: 1rem;
+	}
+
+	.testimonial .year-grad {
+		font-size: 1rem;
+	}
+
+	.testimonial .first-letter {
+		font-size: 2rem;
+	}
+
+	.testimonial .rest-of-text {
+		font-size: 1rem;
+	}
+
+	.testimonial .quote {
+		font-size: 3.5rem;
+	}
+
+	.testimonial .text-section {
+		padding: 1.3rem;
+		width: 14rem;
+	}
+
+	.testimonials-container .cta-button-alumni {
+		margin-top: 1.5rem;
+	}
+
+	.testimonial {
+		padding: 1.3rem;
+		border-radius: 12px;
+	}
+
+	button.cta-button-alumni {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		cursor: pointer;
+		font-weight: bold;
+		text-decoration: none;
+		border-radius: 20px;
+		padding: 14px 25px;
+		background-color: var(--accent-color);
+		font-size: 16px;
+		font-family: "Oswald", system-ui;
+		color: var(--secondary-color);
+		text-transform: uppercase;
+	}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 425px) {
+	.testimonials-section {
+		position: relative;
+		bottom: 10rem;
+	}
+
+	.testimonials-section .heading-container h1 {
+		font-size: 1.3rem;
+	}
+
+	.testimonials-section .sub-heading {
+		font-size: 0.9rem;
+	}
+
+	.image-container {
+	position: relative;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.image-container img {
+	width: 70%;
+	height: 70%;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 3.5px solid var(--secondary-color);
+}
+
+.image-container::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 70%;
+	height: 70%;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease-in-out;
+}
+
+.image-container:hover::before {
+	opacity: 0;
+}
+
+.first-section .name {
+	font-size: 1.1rem;
+}
+
+.first-section .occupation {
+	font-size: 0.8rem;
+
+}
+
+.testimonial{
+	width: 85%;
+}
+
+}

@@ -77,8 +77,8 @@ function NavBarView() {
             </div>
                     <div class="user-dropdown">
                 <ul class="dropdown-list">
-                    <li class="dropdown-link"><a href="/html/Profile.html"><span>Ver Perfil</span></a></li>
-                    ${isAdmin ? `<li class="dropdown-link"><a href="../html/Manage/index.html"><span>Gestão</span></a></li>` : ""}
+                    <li class="dropdown-link"><a class="dropdown-link-a" href="/html/Profile.html"><span>Ver Perfil</span></a></li>
+                    ${isAdmin ? `<li class="dropdown-link"><a class="dropdown-link-a" href="/html/Manage/index.html"><span>Gestão</span></a></li>` : ""}
                     <li class="dropdown-link"><a id="logout-dropdown" href="#"><span>Sair</span></a></li>
                 </ul>
                 </div>
@@ -101,7 +101,7 @@ function NavBarView() {
             <li class="navbar-link"><a class="nav-link-mobile-a" href="${location.pathname === "/html/Manage/index.html" ? "../Profile.html" : "../html/Profile.html"}"><span>Ver Perfil</span></a></li>
            
            
-            ${isAdmin ? `<li class="navbar-link"><a  class="nav-link-mobile-a" href="${location.pathname === "/html/Manage/index.html" ? "../Manage/index.html" : "../html/Manage/index.html"}"><span>Gestão</span></a></li>` : ""}
+            ${isAdmin ? `<li class="navbar-link"><a  class="nav-link-mobile-a" href="${location.pathname === "/Manage/index.html" ? "html/Manage/index.html" : "/html/Manage/index.html"}"><span>Gestão</span></a></li>` : ""}
            
            
            
@@ -177,37 +177,50 @@ function NavBarView() {
 			})
 		: null;
 
-    document.querySelector("#logout-mobile") ? (document.getElementById("logout-mobile").onclick = () => {
-        User.logout();
-        location.href = "/html/index.html";
-        
-    }) : null;
+	document.querySelector("#logout-mobile")
+		? (document.getElementById("logout-mobile").onclick = () => {
+				User.logout();
+				location.href = "/html/index.html";
+			})
+		: null;
 }
 
-// Changes the active link in the NavBar
 document.addEventListener("DOMContentLoaded", () => {
 	const navLinks = document.getElementById("nav-links");
 	const navItems = document.querySelectorAll(".nav-link-a");
 	const mobileLinks = document.querySelector(".links-mobile");
 	const mobileItems = document.querySelectorAll(".nav-link-mobile-a");
+	const userDropdownItems = document.querySelectorAll(".dropdown-link-a");
 
 	const currentPath = window.location.pathname; // Gets the current path
 
-	// For Desktop View
+	// Desktop view links
 	navItems.forEach((navItem) => {
-		if (navItem.getAttribute("href").includes(currentPath)) {
-			navLinks.querySelector(".active")?.classList.remove("active"); // Removes active class from the previous link
-			navItem.classList.add("active"); //  It adds the active class to the current link
+		const href = navItem.getAttribute("href");
+		if (href && href.includes(currentPath)) {
+			navLinks.querySelector(".active")?.classList.remove("active"); // Removes active class from previous link
+			navItem.classList.add("active"); // Adds active class to current link
 		}
 	});
 
-	// For Mobile View
+	// Mobile view links
 	mobileItems.forEach((mobileItem) => {
-		if (mobileItem.getAttribute("href").includes(currentPath)) {
-			mobileLinks.querySelector(".active")?.classList.remove("active"); // Removes active class from the previous link
-			mobileItem.classList.add("active"); //  It adds the active class to the current link
-
+		const href = mobileItem.getAttribute("href");
+		if (href && href.includes(currentPath)) {
+			mobileLinks.querySelector(".active")?.classList.remove("active");
+			mobileItem.classList.add("active");
 			mobileLinks.classList.remove("open");
+		}
+	});
+
+	// User dropdown links
+	userDropdownItems.forEach((item) => {
+		const href = item.getAttribute("href");
+		if (href && currentPath.includes(href)) {
+			// Matches current path
+			navLinks.querySelector(".active")?.classList.remove("active");
+
+			item.classList.add("active");
 		}
 	});
 });
