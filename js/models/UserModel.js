@@ -34,7 +34,14 @@ export function register(username, password, email, genrer, birthdate, location)
 	if (users.some((u) => u.email === email)) {
 		throw new Error(`O email já existe.`);
 	} else {
-		const user = new User(username, password, email, genrer, birthdate, location);
+		const user = new User(
+			username,
+			encrypt(password),
+			email,
+			genrer,
+			birthdate,
+			location,
+		);
 
 		users.push({
 			id: users.length + 1,

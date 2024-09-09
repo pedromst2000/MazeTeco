@@ -5,46 +5,103 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" href="../../assets/svg/Icon.svg" />
 		<title>MazeTeco - Criar Conta</title>
+		<link rel="stylesheet" href="../../css/Auth/register.css" />
 	</head>
 	<body>
-		<form id="register-form">
-			<input type="text" id="username" name="username" placeholder="username" />
-			<input type="email" id="email" name="email" placeholder="email" />
-			<input type="password" id="password" name="password" placeholder="password" />
-			<select id="genrer" name="genrer">
-				<option value="Selecione o género">Selecione o género</option>
-				<option value="masculino">masculino</option>
-				<option value="feminino">feminino</option>
-			</select>
-			<input type="date" id="birthday" name="birthday" />
-			<select id="location" name="location">
-				<option value="Selecione a localidade">Selecione a localidade</option>
-				<option value="Aveiro">Aveiro</option>
-				<option value="Beja">Beja</option>
-				<option value="Braga">Braga</option>
-				<option value="Bragança">Bragança</option>
-				<option value="Castelo Branco">Castelo Branco</option>
-				<option value="Coimbra">Coimbra</option>
-				<option value="Évora">Évora</option>
-				<option value="Faro">Faro</option>
-				<option value="Guarda">Guarda</option>
-				<option value="Leiria">Leiria</option>
-				<option value="Lisboa">Lisboa</option>
-				<option value="Portalegre">Portalegre</option>
-				<option value="Porto">Porto</option>
-				<option value="Santarém">Santarém</option>
-				<option value="Setúbal">Setúbal</option>
-				<option value="Viana do Castelo">Viana do Castelo</option>
-				<option value="Vila Real">Vila Real</option>
-				<option value="Viseu">Viseu</option>
-			</select>
-			<span>
-				Already have an Account
-				<a id="link-login" href="../Authentication/login.html">Login</a>
-			</span>
-			<button type="submit" id="register-btn">Register</button>
-			<div id="message"></div>
-		</form>
+		<div class="register-container">
+			<div class="form-container">
+				<div class="logo">
+					<img src="../../assets/svg/Logo.svg" alt="Logo" />
+				</div>
+				<div class="heading">
+					<h1>Bem-Vindo</h1>
+				</div>
+				<div class="subheading">
+					<p>
+						Crie a sua conta para começar a sua aventura e explorar as oportunidades
+						oferecidas pelo curso de Tecnologias Web.
+					</p>
+				</div>
+				<div class="form">
+					<form action="#" id="register-form">
+						<input type="text" id="username" name="username" placeholder="username" />
+						<input type="email" id="email" name="email" placeholder="email" />
+
+						<div class="password">
+							<div class="input-password">
+								<input
+									type="password"
+									id="password"
+									name="password"
+									placeholder="password"
+									autocomplete="on"
+								/>
+							</div>
+							<div class="togglePassword">
+								<img
+									id="TogglePassword"
+									class="hiddenEye"
+									src="../../assets/svg/icons/HideenEyeIcon.svg"
+									alt="hiddeneye"
+								/>
+							</div>
+						</div>
+
+						<input type="date" id="birthday" name="birthday" />
+
+						<div class="select-inputs">
+							<select id="gender" name="gender">
+								<option value="Selecione o género">Selecione o género</option>
+								<option value="masculino">masculino</option>
+								<option value="feminino">feminino</option>
+							</select>
+							<select id="location" name="location">
+								<option value="Selecione a localidade">Selecione a localidade</option>
+								<option value="Aveiro">Aveiro</option>
+								<option value="Beja">Beja</option>
+								<option value="Braga">Braga</option>
+								<option value="Bragança">Bragança</option>
+								<option value="Castelo Branco">Castelo Branco</option>
+								<option value="Coimbra">Coimbra</option>
+								<option value="Évora">Évora</option>
+								<option value="Faro">Faro</option>
+								<option value="Guarda">Guarda</option>
+								<option value="Leiria">Leiria</option>
+								<option value="Lisboa">Lisboa</option>
+								<option value="Portalegre">Portalegre</option>
+								<option value="Porto">Porto</option>
+								<option value="Santarém">Santarém</option>
+								<option value="Setúbal">Setúbal</option>
+								<option value="Viana do Castelo">Viana do Castelo</option>
+								<option value="Vila Real">Vila Real</option>
+								<option value="Viseu">Viseu</option>
+							</select>
+						</div>
+
+						<span class="auth-link">
+							Tens uma conta?
+							<a id="link-register" href="../Authentication/login.html">
+								<span>Iniciar Sessão</span>
+							</a>
+						</span>
+						<button type="submit">Criar Conta</button>
+					</form>
+				</div>
+				<div class="copy-container">
+					<span class="copy">&copy;2024 MazeTeco</span>
+				</div>
+				<div id="message">
+					<!-- Injetado Via JS -->
+				</div>
+			</div>
+			<div class="img-container">
+				<img src="../../assets/images/Auth.png" alt="auth-image" />
+			</div>
+		</div>
+
+		<div class="arrow-back">
+			<img id="goBack" src="../../assets/svg/icons/ArrowHeroIcon.svg" alt="arrow" />
+		</div>
 
 		<script type="module" src="../../js/views/AuthView.js"></script>
 	</body>

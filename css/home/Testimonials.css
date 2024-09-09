@@ -107,7 +107,7 @@
 
 .testimonial .rest-of-text {
 	font-weight: 300;
-	font-size: 14px;
+	font-size: 15px;
 }
 .testimonial .quote {
 	font-size: 3rem;
@@ -352,48 +352,46 @@ button.cta-button-alumni:hover {
 	}
 
 	.image-container {
-	position: relative;
-	width: 70px;
-	height: 70px;
-	border-radius: 50%;
-	overflow: hidden;
-}
+		position: relative;
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+		overflow: hidden;
+	}
 
-.image-container img {
-	width: 70%;
-	height: 70%;
-	border-radius: 50%;
-	object-fit: cover;
-	border: 3.5px solid var(--secondary-color);
-}
+	.image-container img {
+		width: 70%;
+		height: 70%;
+		border-radius: 50%;
+		object-fit: cover;
+		border: 3.5px solid var(--secondary-color);
+	}
 
-.image-container::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 70%;
-	height: 70%;
-	border-radius: 50%;
-	background-color: rgba(0, 0, 0, 0.1);
-	transition: background-color 0.3s ease-in-out;
-}
+	.image-container::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 70%;
+		height: 70%;
+		border-radius: 50%;
+		background-color: rgba(0, 0, 0, 0.1);
+		transition: background-color 0.3s ease-in-out;
+	}
 
-.image-container:hover::before {
-	opacity: 0;
-}
+	.image-container:hover::before {
+		opacity: 0;
+	}
 
-.first-section .name {
-	font-size: 1.1rem;
-}
+	.first-section .name {
+		font-size: 1.1rem;
+	}
 
-.first-section .occupation {
-	font-size: 0.8rem;
+	.first-section .occupation {
+		font-size: 0.8rem;
+	}
 
-}
-
-.testimonial{
-	width: 85%;
-}
-
+	.testimonial {
+		width: 85%;
+	}
 }

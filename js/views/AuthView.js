@@ -20,6 +20,23 @@ function authView() {
 	let birthdate;
 	let _location_;
 
+	// Toggle password visibility
+	document.getElementById("TogglePassword").onclick = () => {
+		const img = document.getElementById("TogglePassword");
+
+		if (document.getElementById("password").type === "password") {
+			document.getElementById("password").type = "text";
+			img.src = "../../assets/svg/icons/OpenEyeIcon.svg";
+		} else {
+			document.getElementById("password").type = "password";
+			img.src = "../../assets/svg/icons/HideenEyeIcon.svg";
+		}
+	};
+
+	document.getElementById("goBack").onclick = () => {
+		history.back(); // Go back to the previous page
+	};
+
 	location.pathname.includes("/login")
 		? (document.getElementById("login-form").onsubmit = (e) => {
 				e.preventDefault();
@@ -59,7 +76,7 @@ function authView() {
 				email = document.getElementById("email").value;
 				username = document.getElementById("username").value;
 				password = document.getElementById("password").value;
-				genrer = document.getElementById("genrer").value;
+				genrer = document.getElementById("gender").value;
 				birthdate = document.getElementById("birthday").value;
 				_location_ = document.getElementById("location").value;
 
@@ -96,7 +113,7 @@ function authView() {
 
 					setTimeout(
 						() => {
-							location.href = "html/Authentication/login.html";
+							location.href = "/html/Authentication/login.html";
 						},
 
 						1500,

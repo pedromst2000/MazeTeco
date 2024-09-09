@@ -12,7 +12,7 @@ footer {
 	background-color: var(--secondary-color);
 	font-family: "Oswald", system-ui;
 	color: var(--primary-color);
-    margin-top: 8em;
+	margin-top: 8em;
 }
 
 footer a {
@@ -66,8 +66,8 @@ footer a:hover {
 	display: flex;
 	justify-content: center;
 	margin: 2rem 0;
-    position: relative;
-    bottom: 2em;
+	position: relative;
+	bottom: 2em;
 }
 
 .line {
@@ -77,15 +77,14 @@ footer a:hover {
 	border-radius: 50px;
 }
 
-
 .bottom-container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem 2.5rem;
 	flex-wrap: wrap;
-    position: relative;
-    bottom: 2em;
+	position: relative;
+	bottom: 2em;
 }
 
 .bottom-container .logo img {
@@ -119,148 +118,146 @@ footer a:hover {
 
 footer .top-container .header {
 	letter-spacing: 2px;
-    font-weight: 600;
+	font-weight: 600;
 }
 
 .social-media-container .links ul li a {
 	font-size: 0.9rem;
 	letter-spacing: 1.5px;
-	font-weight: 100;
+	font-weight: 300;
 }
 
 .events-container .links ul li a {
 	font-size: 0.9rem;
 	letter-spacing: 1.5px;
-	font-weight: 100;
+	font-weight: 300;
 }
 
 .help-container .links ul li a {
 	font-size: 0.9rem;
 	letter-spacing: 1.5px;
-	font-weight: 100;
+	font-weight: 300;
 }
 
 .contacts-container .contacts span {
 	font-size: 0.9rem;
 	letter-spacing: 1.5px;
-	font-weight: 100;
+	font-weight: 300;
 }
 
 .bottom-container .terms {
-    font-size: 0.8rem;
-    letter-spacing: 1.5px;
-    font-weight: 100;
+	font-size: 0.8rem;
+	letter-spacing: 1.5px;
+	font-weight: 300;
 }
 
 .terms .author {
-    font-weight: 400;
-    letter-spacing: 1.5px;
-    text-decoration: underline;
+	font-weight: 400;
+	letter-spacing: 1.5px;
+	text-decoration: underline;
 }
 
 @media only screen and (min-width: 300px) and (max-width: 425px) {
-    
+	body {
+		height: 100vh;
+	}
 
-    body{
-        height: 100vh;
-    }
+	footer {
+		height: 150vh;
+		position: relative;
+		bottom: 15em;
+	}
 
-    footer{
-        height: 150vh;
-        position: relative;
-        bottom: 15em;
-    }
-    
-    .top-container {
-        padding: 1rem;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
+	.top-container {
+		padding: 1rem;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
 
-    .links-container,
-    .social-media-container,
-    .events-container,
-    .help-container,
-    .contacts-container {
-        margin: 1rem 0;
-    }
+	.links-container,
+	.social-media-container,
+	.events-container,
+	.help-container,
+	.contacts-container {
+		margin: 1rem 0;
+	}
 
-    .links ul,
-    .links li,
-    .contacts span {
-        margin-bottom: 0.5rem;
-    }
+	.links ul,
+	.links li,
+	.contacts span {
+		margin-bottom: 0.5rem;
+	}
 
-    .header span {
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-    }
+	.header span {
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
+	}
 
-    .contacts-container .contacts {
-        gap: 1rem;
-    }
+	.contacts-container .contacts {
+		gap: 1rem;
+	}
 
-    .line-container {
-        margin: 1rem 0;
-        margin-top: 1.7rem;
-    }
+	.line-container {
+		margin: 1rem 0;
+		margin-top: 1.7rem;
+	}
 
-    .line {
-        width: 80%;
-    }
+	.line {
+		width: 80%;
+	}
 
-    .bottom-container {
-        padding: 1rem 1.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-    }
+	.bottom-container {
+		padding: 1rem 1.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 1.5rem;
+	}
 
-    .bottom-container .logo img {
-        height: 20px;
-    }
+	.bottom-container .logo img {
+		height: 20px;
+	}
 
-    .bottom-container .terms {
-        font-size: 0.7rem;
-    }
+	.bottom-container .terms {
+		font-size: 0.7rem;
+	}
 
-    .bottom-container .social-media div img {
-        width: 20px;
-        height: 20px;
-    }
+	.bottom-container .social-media div img {
+		width: 20px;
+		height: 20px;
+	}
 
-    .main-links-container .links ul li a {
-        font-size: 0.8rem;
-    }
+	.main-links-container .links ul li a {
+		font-size: 0.8rem;
+	}
 
-    footer .top-container .header {
-        font-size: 1rem;
-    }
+	footer .top-container .header {
+		font-size: 1rem;
+	}
 
-    .social-media-container .links ul li a {
-        font-size: 0.8rem;
-    }
+	.social-media-container .links ul li a {
+		font-size: 0.8rem;
+	}
 
-    .events-container .links ul li a {
-        font-size: 0.8rem;
-    }
+	.events-container .links ul li a {
+		font-size: 0.8rem;
+	}
 
-    .help-container .links ul li a {
-        font-size: 0.8rem;
-    }
+	.help-container .links ul li a {
+		font-size: 0.8rem;
+	}
 
-    .contacts-container .contacts span {
-        font-size: 0.8rem;
-    }
+	.contacts-container .contacts span {
+		font-size: 0.8rem;
+	}
 
-    .bottom-container .terms {
-        font-size: 0.7rem;
-    }
+	.bottom-container .terms {
+		font-size: 0.7rem;
+	}
 
-    .terms .author {
-        font-size: 0.7rem;
-    }
+	.terms .author {
+		font-size: 0.7rem;
+	}
 }

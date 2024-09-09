@@ -10,10 +10,14 @@
 export function displayMessage(element, message, type) {
 	const divMessage = document.querySelector(element);
 	divMessage.innerHTML = `
-    <div class="auth-message-${type}">${message}</div>
+					<div class="auth-message ${type}">
+						<div class="message">
+							<span>${message}</span>
+						</div>
+					</div>
 `;
 
 	setTimeout(() => {
 		divMessage.innerHTML = "";
-	}, 2000);
+	}, 100000);
 }
