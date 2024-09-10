@@ -69,8 +69,9 @@ export function addPoster(photo, download_name, company, year, theme, descriptio
 export function deletePoster(id) {
 	const index = posters.findIndex((poster) => poster.id === id);
 
-	if (index !== -1) { // if the poster exists in the array 
-		posters.splice(index, 1); 
+	if (index !== -1) {
+		// if the poster exists in the array
+		posters.splice(index, 1);
 
 		localStorage.setItem("posters", JSON.stringify(posters));
 	}

@@ -59,8 +59,13 @@ function NavBarView() {
 
     <div class="nav-links">
         <ul id="nav-links" class="nav-links-list">
-            <li class="navbar-link"><a class="nav-link-a active" href="${location.pathname.includes("/html/Details/") ? "../../html/index.html " : 
-					location.pathname.includes("/html/Manage/") ? "../index.html" : "/html/index.html"}"
+            <li class="navbar-link"><a class="nav-link-a active" href="${
+							location.pathname.includes("/html/Details/")
+								? "../../html/index.html "
+								: location.pathname.includes("/html/Manage/")
+									? "../index.html"
+									: "/html/index.html"
+						}"
 
 
 
@@ -68,19 +73,23 @@ function NavBarView() {
             <li class="navbar-link"><a class="nav-link-a" href="${
 							location.pathname.includes("/html/Details/")
 								? "../../html/About.html"
-								: 
-								location.pathname.includes("/html/Manage/") ? "../About.html" : "/html/About.html"
-
+								: location.pathname.includes("/html/Manage/")
+									? "../About.html"
+									: "/html/About.html"
 						}"><span>About</span></a></li>
             <li class="navbar-link"><a class="nav-link-a" href="${
 							location.pathname.includes("/html/Details/")
 								? "../../html/Events.html"
-								:  location.pathname.includes("/html/Manage/") ? "../Events.html" : "/html/Events.html"
+								: location.pathname.includes("/html/Manage/")
+									? "../Events.html"
+									: "/html/Events.html"
 						}"><span>Eventos</span></a></li>
             <li class="navbar-link"><a class="nav-link-a" href="${
 							location.pathname.includes("/html/Details/")
 								? "../../html/Gallery.html"
-								: location.pathname.includes("/html/Manage/") ? "../Gallery.html" : "/html/Gallery.html"
+								: location.pathname.includes("/html/Manage/")
+									? "../Gallery.html"
+									: "/html/Gallery.html"
 						}"><span>Galeria</span></a></li>
             </ul>
         </div>

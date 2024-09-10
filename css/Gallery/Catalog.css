@@ -14,8 +14,8 @@
 	box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
+body {
+	height: 100vh;
 }
 
 .catalog-container {
@@ -227,12 +227,12 @@ body{
 
 footer {
 	position: relative;
-    bottom: 10em;
+	bottom: 10em;
 }
 
-.no-results{
-    font-size: 1.4em;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    margin-bottom: 2em;
+.no-results {
+	font-size: 1.4em;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+	margin-bottom: 2em;
 }

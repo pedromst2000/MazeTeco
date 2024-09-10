@@ -14,7 +14,7 @@
 export default class Teaser {
 	video = "" || null; // Default value
 	embeddedSrc = "" || null; // Default value~
-	photo = ""; 
+	photo = "";
 	title = "";
 	company = "";
 	year = 0;

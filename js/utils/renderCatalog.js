@@ -4,7 +4,7 @@
  * @param {Array} render - The array of items to render
  */
 
-export function renderCatalog  (render) {
+export function renderCatalog(render) {
 	document.querySelector(".catalog-container").innerHTML = `
 			${
 				render.length === 0
@@ -82,4 +82,4 @@ export function renderCatalog  (render) {
 							.join("")
 			}
 		`;
-};
+}

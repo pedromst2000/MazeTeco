@@ -21,11 +21,6 @@ function AlumniView() {
 		tag: Tag.getTagName(alumni.tag_id),
 	};
 
-	alumni = {
-		...alumni,
-		tag: Tag.getTagName(alumni.tag_id),
-	};
-
 	document.querySelector(".alumni-details").innerHTML = `
       <div class="button-go-back">
 		<div class="btn">
