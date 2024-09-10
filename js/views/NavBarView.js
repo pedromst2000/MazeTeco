@@ -221,8 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			navItem.classList.add("active"); // Adds active class to current link
 		}
 
-		// if the location path is /html/Details/Poster.html
-		if (currentPath.includes("/html/Details/Poster.html")) {
+		if (currentPath.includes("/html/Details")) {
 			navLinks.querySelector(".active")?.classList.remove("active"); // Removes active class from previous link
 			navItems[3].classList.add("active"); // Adds active class to current
 		}

@@ -21,7 +21,7 @@ body {
 	font-family: "Oswald", sans-serif;
 }
 
-.poster-details-container {
+.alumni-details-container {
 	display: flex;
 	flex-direction: row;
 	gap: 130px;
@@ -32,7 +32,7 @@ body {
 	align-items: flex-start;
 }
 
-.poster-details-image {
+.alumni-details-image {
 	max-width: 370px;
 	width: 100%;
 	display: flex;
@@ -41,7 +41,7 @@ body {
 	gap: 10px;
 }
 
-.poster-image {
+.alumni-image {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -55,7 +55,7 @@ body {
 	position: relative;
 }
 
-.poster-image::before {
+.alumni-image::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -68,11 +68,11 @@ body {
 	z-index: 1;
 }
 
-.poster-image:hover::before {
+.alumni-image:hover::before {
 	opacity: 0.3;
 }
 
-.poster-image img {
+.alumni-image img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -85,7 +85,7 @@ body {
 	z-index: 0;
 }
 
-.poster-options {
+.alumni-options {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -98,6 +98,7 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	padding: 2em;
+	gap: 140px;
 }
 
 #goBack {
@@ -106,7 +107,7 @@ body {
 	cursor: pointer;
 }
 
-.poster-details-info {
+.alumni-details-info {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -115,31 +116,31 @@ body {
 	padding: 5px;
 }
 
-.poster-company {
+.alumni-name {
 	font-family: "Libre Caslon Text", serif;
 	font-weight: 900;
 	font-size: 33px;
 	color: var(--secondary-color);
 }
 
-.poster-year {
+.alumni-year {
 	font-weight: 300;
 	font-size: 20px;
 	color: var(--secondary-color);
 }
 
-.poster-theme {
+.alumni-occupation {
 	font-weight: 400;
 	font-size: 22px;
 	color: var(--secondary-color);
 	letter-spacing: 0.15rem;
 }
 
-.poster-tag {
+.alumni-tag {
 	text-align: right;
 }
 
-.poster-tag span {
+.alumni-tag span {
 	border: 2.5px solid var(--secondary-color);
 	padding: 0.1em 1.6em;
 	letter-spacing: 0.01rem;
@@ -149,7 +150,7 @@ body {
 
 .text-container {
 	font-family: "Oswald", system-ui;
-	font-size: 0.98rem;
+	font-size: 18px;
 	font-weight: 300;
 	letter-spacing: 0.03rem;
 	text-align: justify;
@@ -183,8 +184,7 @@ body {
 }
 
 #delete-button {
-	background-color: var(--primary-color);
-	border: 3px solid var(--secondary-color);
+	background-color: var(--accent-color);
 }
 
 .first-row {
@@ -201,36 +201,46 @@ body {
 	width: 100%;
 }
 
+q {
+	font-size: 1.5em;
+	font-weight: 700;
+}
+
+.text-container {
+    font-size: 0.95em;
+}
+
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-	.poster-details-container {
+	.alumni-details-container {
 		flex-direction: column;
 		align-items: center;
 		padding: 10px;
 	}
 
-	.poster-details-image,
-	.poster-details-info {
+	.alumni-details-image,
+	.alumni-details-info {
 		width: 100%;
 		max-width: none;
 	}
 
-	.poster-image {
+	.alumni-image {
 		width: 90%;
 		max-width: none;
 		height: auto;
 	}
 
-	.poster-company {
+	.alumni-name {
 		font-size: 28px;
 	}
 
-	.poster-year,
-	.poster-theme {
+	.alumni-year,
+	.alumni-occupation {
 		font-size: 18px;
 	}
 
-	.poster-tag span {
+	.alumni-tag span {
 		font-size: 16px;
 		padding: 0.1em 1em;
 	}
@@ -240,19 +250,15 @@ body {
 		font-size: 14px;
 		padding: 0.4em 1em;
 	}
-
-	.text-container {
-		font-size: 0.9rem;
-	}
 }
 
 @media screen and (max-width: 480px) {
-	.poster-company {
+	.poster-name {
 		font-size: 24px;
 	}
 
-	.poster-year,
-	.poster-theme {
+	.alumni-year,
+	.alumni-occupation {
 		font-size: 16px;
 	}
 
@@ -262,11 +268,11 @@ body {
 		padding: 0.3em 0.8em;
 	}
 
-	.poster-details-container {
+	.alumni-details-container {
 		gap: 20px;
 	}
 
-	.poster-options {
+	.alumni-options {
 		gap: 10px;
 	}
 }

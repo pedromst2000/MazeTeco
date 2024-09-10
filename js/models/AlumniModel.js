@@ -35,21 +35,21 @@ export function getAlumniById(id) {
 /**
  * @function addAlumni
  * @description This function add a new alumni and add it to the alumnis array.
+ * @param {string} photo - The photo of the alumni
+ * @param {string} name - The name of the alumni
  * @param {number} yearGrad - The year of graduation of the alumni
  * @param {string} occupation - The occupation of the alumni
  * @param {string} testimony - The testimony of the alumni
  * @param {string} description - The description of the alumni
- * @param {string} photo - The photo of the alumni
  * @returns {void}
  */
 
-export function addAlumni(yearGrad, occupation, testimony, description, photo) {
-
+export function addAlumni(photo, name, yearGrad, occupation, testimony, description) {
 	if (alumnis.some((a) => a.testimony === testimony)) {
 		throw new Error(`A citação já existe.`);
 	}
 
-	const alumni = new Alumni(title, yearGrad, occupation, testimony, description, photo);
+	const alumni = new Alumni(photo, name, yearGrad, occupation, testimony, description);
 
 	alumnis.push({
 		id: alumnis.length + 1,

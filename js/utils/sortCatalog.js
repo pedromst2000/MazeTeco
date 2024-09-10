@@ -14,7 +14,7 @@ const SORTING_STATE = {
 
 function sortCatalog(catalog, field, ascending = true) {
 	catalog.sort((a, b) => {
-		const aField = a[field] ? a[field].toLowerCase() : ""; //a[field] the same as a.title, a.theme, a.occupation 
+		const aField = a[field] ? a[field].toLowerCase() : "";
 		const bField = b[field] ? b[field].toLowerCase() : "";
 
 		if (aField === bField) return 0;

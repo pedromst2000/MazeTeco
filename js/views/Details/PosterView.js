@@ -17,8 +17,6 @@ function PosterView() {
 	let poster = Poster.gePosterById(parseInt(posterId));
 	const isAdmin = User.getLoggedUser()?.role === "admin";
 
-	console.log(poster);
-
 	poster = {
 		...poster,
 		tag: Tag.getTagName(poster.tag_id),
@@ -109,7 +107,7 @@ function PosterView() {
 
 	document.getElementById("confirmDelete").addEventListener("click", () => {
 		Poster.deletePoster(poster.id);
-		window.history.back(); // redirect to the gallery 
+		window.history.back(); // redirect to the gallery
 	});
 
 	window.addEventListener("click", (event) => {
