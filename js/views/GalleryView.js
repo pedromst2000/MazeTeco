@@ -4,7 +4,7 @@ import * as Teaser from "../models/TeaserModel.js";
 import * as Tag from "../models/TagModel.js";
 import * as Category from "../models/CategoryModel.js";
 import { renderCatalog } from "../utils/renderCatalog.js";
-import { sortCatalog, toggleSort } from "../utils/sortCatalog.js";
+import { toggleSort } from "../utils/sortCatalog.js";
 
 /**
  * @function GalleryView

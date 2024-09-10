@@ -87,6 +87,11 @@ export function addTeaser(
  */
 
 export function deleteTeaser(id) {
-	teasers = teasers.filter((teaser) => teaser.id !== id);
-	localStorage.setItem("teasers", JSON.stringify(teasers));
+	const index = teasers.findIndex((teaser) => teaser.id === id);
+
+	if (index !== -1) {
+		teasers.splice(index, 1);
+
+		localStorage.setItem("teasers", JSON.stringify(teasers));
+	}
 }

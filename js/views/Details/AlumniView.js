@@ -1,4 +1,4 @@
-import * as Alumni from "../models/AlumniModel.js";
+import * as Alumni from "../../models/AlumniModel.js";
 
 /**
  * @function AlumniView

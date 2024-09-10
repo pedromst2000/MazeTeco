@@ -66,6 +66,11 @@ export function addAlumni(yearGrad, occupation, testimony, description, photo) {
  */
 
 export function deleteAlumni(id) {
-	alumnis = alumnis.filter((alumni) => alumni.id !== id);
-	localStorage.setItem("alumnis", JSON.stringify(alumnis));
+	const index = alumnis.findIndex((alumni) => alumni.id === id);
+
+	if (index !== -1) {
+		alumnis.splice(index, 1);
+
+		localStorage.setItem("alumnis", JSON.stringify(alumnis));
+	}
 }

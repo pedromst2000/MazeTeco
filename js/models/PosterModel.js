@@ -29,7 +29,7 @@ export function getPosters() {
  */
 
 export function gePosterById(id) {
-	return posters.find((poster) => poster.id === id);
+	return posters.find((poster) => poster.id === parseInt(id));
 }
 
 /**
@@ -67,6 +67,11 @@ export function addPoster(photo, download_name, company, year, theme, descriptio
  */
 
 export function deletePoster(id) {
-	posters = posters.filter((poster) => poster.id !== id);
-	localStorage.setItem("posters", JSON.stringify(posters));
+	const index = posters.findIndex((poster) => poster.id === id);
+
+	if (index !== -1) { // if the poster exists in the array 
+		posters.splice(index, 1); 
+
+		localStorage.setItem("posters", JSON.stringify(posters));
+	}
 }

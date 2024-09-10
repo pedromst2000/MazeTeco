@@ -59,10 +59,29 @@ function NavBarView() {
 
     <div class="nav-links">
         <ul id="nav-links" class="nav-links-list">
-            <li class="navbar-link"><a class="nav-link-a active" href="../html/index.html"><span>Home</span></a></li>
-            <li class="navbar-link"><a class="nav-link-a" href="../html/About.html"><span>About</span></a></li>
-            <li class="navbar-link"><a class="nav-link-a" href="../html/Events.html"><span>Eventos</span></a></li>
-            <li class="navbar-link"><a class="nav-link-a" href="../html/Gallery.html"><span>Galeria</span></a></li>
+            <li class="navbar-link"><a class="nav-link-a active" href="${location.pathname.includes("/html/Details/") ? "../../html/index.html " : 
+					location.pathname.includes("/html/Manage/") ? "../index.html" : "/html/index.html"}"
+
+
+
+			}"><span>Home</span></a></li>
+            <li class="navbar-link"><a class="nav-link-a" href="${
+							location.pathname.includes("/html/Details/")
+								? "../../html/About.html"
+								: 
+								location.pathname.includes("/html/Manage/") ? "../About.html" : "/html/About.html"
+
+						}"><span>About</span></a></li>
+            <li class="navbar-link"><a class="nav-link-a" href="${
+							location.pathname.includes("/html/Details/")
+								? "../../html/Events.html"
+								:  location.pathname.includes("/html/Manage/") ? "../Events.html" : "/html/Events.html"
+						}"><span>Eventos</span></a></li>
+            <li class="navbar-link"><a class="nav-link-a" href="${
+							location.pathname.includes("/html/Details/")
+								? "../../html/Gallery.html"
+								: location.pathname.includes("/html/Manage/") ? "../Gallery.html" : "/html/Gallery.html"
+						}"><span>Galeria</span></a></li>
             </ul>
         </div>
 
@@ -200,6 +219,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (href && href.includes(currentPath)) {
 			navLinks.querySelector(".active")?.classList.remove("active"); // Removes active class from previous link
 			navItem.classList.add("active"); // Adds active class to current link
+		}
+
+		// if the location path is /html/Details/Poster.html
+		if (currentPath.includes("/html/Details/Poster.html")) {
+			navLinks.querySelector(".active")?.classList.remove("active"); // Removes active class from previous link
+			navItems[3].classList.add("active"); // Adds active class to current
 		}
 	});
 
