@@ -115,6 +115,12 @@ function homeView() {
 	renderSlides();
 
 	const testimonalSection = document.querySelector(".testimonials-container");
+	const displayTip = document.getElementById("tip-testimonial");
+
+	displayTip.innerHTML = `
+		${!isLogged ? "Inicia sessão para visualização completa dos testemunhos" : ""}
+	`;
+
 	testimonalSection.innerHTML = `
 		${alumnis
 			.map((alumni) => {

@@ -3,6 +3,7 @@
  * @description This class represents a Teaser
  * @param {string} videosrc - The video src of the teaser
  * @param {string} embeddedSrc - The embedded video of the teaser is optional since it can have a video uploaded
+ * @param {string} photo - The photo of the teaser
  * @param {string} title - The title of the video
  * @param {string} company - The company each is related to the teaser.
  * @param {number} year - The year of the teaser
@@ -12,16 +13,18 @@
 
 export default class Teaser {
 	video = "" || null; // Default value
-	embeddedSrc = "" || null; // Default value
+	embeddedSrc = "" || null; // Default value~
+	photo = ""; 
 	title = "";
 	company = "";
 	year = 0;
 	description = "";
 
 	/**
-	 * @description Creates an instance of Event
+	 * @description Creates an instance of Teaser.
 	 * @param {string} video - The video of the teaser is optional since it can have youtube embedded video
 	 * @param {string} embeddedSrc - The embedded video of the teaser is optional since it can have a video uploaded
+	 * @param {string} photo - The photo of the teaser
 	 * @param {string} title - The title of the event is optional since it can have a logo
 	 * @param {string} company - The company each is related to the teaser.
 	 * @param {number} year - The year of the teaser
@@ -35,6 +38,7 @@ export default class Teaser {
 	constructor(
 		video = "" || null, // Default value
 		embeddedSrc = "" || null, // Default value
+		photo,
 		title,
 		company,
 		year,
@@ -43,6 +47,7 @@ export default class Teaser {
 	) {
 		this.video = video;
 		this.embeddedSrc = embeddedSrc;
+		this.photo = photo;
 		this.title = title;
 		this.company = company;
 		this.year = year;

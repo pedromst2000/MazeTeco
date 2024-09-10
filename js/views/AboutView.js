@@ -8,7 +8,6 @@ import * as User from "../models/UserModel.js";
 
 function AboutView() {
 	User.init();
-
 }
 
 AboutView();

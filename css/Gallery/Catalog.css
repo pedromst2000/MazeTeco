@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&display=swap");
+
+/* global variables */
+:root {
+	--primary-color: #e9f0fd;
+	--secondary-color: #0c2c7e;
+	--accent-color: #a3cb38;
+	--accent-color-light: #d4edb5;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+.catalog-container {
+	font-family: "Oswald", system-ui;
+	color: var(--secondary-color);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 4rem;
+	padding: 6rem;
+}
+
+.flip-card {
+	background-color: transparent;
+	perspective: 1000px;
+	border-radius: 20px;
+}
+
+.flip-card-inner {
+	position: relative;
+	width: 300px;
+	height: 450px;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 85%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	border-radius: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.flip-card-front {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+}
+
+.flip-card-back {
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	transform: rotateY(180deg);
+}
+
+.flip-card-back-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 2rem;
+	gap: 1rem;
+}
+
+.back-name {
+	font-size: 23px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+}
+
+.back-year {
+	font-size: 18px;
+	font-weight: 100;
+	letter-spacing: 0.5px;
+}
+
+.back-title {
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+}
+
+.button-container {
+	margin-top: 20px;
+}
+
+.card-image {
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+	border-radius: 20px 20px 0 0;
+}
+
+.card-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+	flex-grow: 1;
+	padding: 1rem;
+	border-left: 4px solid var(--secondary-color);
+	border-right: 4px solid var(--secondary-color);
+	border-bottom: 8px solid var(--secondary-color);
+	border-radius: 0 0 20px 20px;
+}
+
+.first-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.second-row {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.third-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5rem;
+	margin-top: 1rem;
+}
+
+.button-row {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.teaser-button,
+.front-end-button {
+	padding: 0.5rem 1rem;
+	background-color: var(--accent-color);
+	color: var(--secondary-color);
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.teaser-button:hover,
+.front-end-button:hover {
+	background-color: var(--accent-color-light);
+}
+
+.card-name {
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+}
+
+.card-year {
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+}
+
+.card-title {
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+}
+
+.card-category {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	border-radius: 20px;
+	font-size: 14px;
+	width: 100px;
+	padding: 0.15rem;
+}
+
+.card-tag {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+}
+
+.button-back {
+	font-family: "Oswald", system-ui;
+	padding: 0.5rem 3rem;
+	font-weight: 500;
+	background-color: var(--accent-color);
+	color: var(--secondary-color);
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.button-back:hover {
+	background-color: var(--accent-color-light);
+}
+
+footer {
+	position: relative;
+    bottom: 10em;
+}
+
+.no-results{
+    font-size: 1.4em;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin-bottom: 2em;
+}
