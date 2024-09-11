@@ -37,7 +37,11 @@ The following project was developed using the following technologies:
 
 ## :construction_worker_man: Architecture
 
-![Architecture](./MazeTeco/images/MVC.png)
+<div>
+  <img src="../MazeTeco/images/MVC.png" alt="mazeteco-architecture">
+</div>
+
+
 
 ## :link: Contact
 
