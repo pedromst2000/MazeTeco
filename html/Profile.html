@@ -6,6 +6,7 @@
 		<link rel="icon" href="../assets/svg/Icon.svg" />
 		<title id="Profile"></title>
 		<link rel="stylesheet" href="../css/Navbar.css" />
+		<link rel="stylesheet" href="../css/Profile.css" />
 	</head>
 	<body>
 		<!-- Navbar -->
@@ -13,9 +14,71 @@
 			<!-- injetado via JS -->
 		</header>
 
-		<h1>Profile Page</h1>
+		<div class="profile-banner">
+			<img src="../assets/images/Banner.png" alt="Banner" />
+		</div>
+
+		<div class="profile-content">
+			<div class="first-column">
+				<div class="location">
+					<div class="icon-location">
+						<img src="../assets/svg/icons/LocationIcon.png" alt="location">
+					</div>
+					<div id="location"></div>
+				</div>
+				<div class="birthday">
+					<div class="icon-birthday">
+						<img src="../assets/svg/icons/BirthdayIcon.svg" alt="birthday">
+					</div>
+					<div id="birthday"></div>
+				</div>
+			</div>
+			<div class="second-column">
+				<div class="avatar-section">
+					<div class="avatar">
+						<img src="" alt="">
+					</div>
+					<div class="nevel-user"></div>
+					<div class="username-section">
+						<div class="gender"></div>
+						<div class="username"></div>
+					</div>
+				</div>
+				<div class="gallery-section">
+					<div class="gallery-title">
+						<div class="title">Galeria de Avatares</div>
+						<div class="tip-title">Escolhe um avatar para o perfill</div>
+					</div>
+					<div class="atatars-list"></div>
+				</div>
+				<div class="profile-options">
+					<div class="change-password-btn">
+						<button id="change-password">Alterar Password</button>
+					</div>
+					<div class="delete-account-btn">
+						<button id="delete-account">Remover Conta</button>
+					</div>
+					<div class="signout--btn">
+						<button id="signout">
+							<img src="../assets/svg/icons/SignOutIcon.svg" alt="signoutIcon" />
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="last-column">
+				<div class="social-media">
+					<div class="instagram">
+						<img src="../assets/svg/icons/Instagram_V2.svg" alt="instagram" />
+					</div>
+					<div class="linkedin">
+						<img src="../assets/svg/icons/LinkedinIcon.svg" alt="Linkedin" />
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<a href="../html/index.html"></a>
 		<script type="module" src="../js/views/NavBarView.js"></script>
+		<script type="module" src="../js/views/ProfileView.js"></script>
 	</body>
 </html>
