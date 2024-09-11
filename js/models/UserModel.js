@@ -13,6 +13,16 @@ export function init() {
 }
 
 /**
+ * @function getUsers
+ * @description This function returns the users array.
+ * @returns {Array<User>}
+ */
+
+export function getUsers() {
+	return users;
+}
+
+/**
  * @function register
  * @description This function register a new user and add it to the users array.
  * @param {string} username - The username of the user
@@ -110,4 +120,42 @@ export function getLoggedUser() {
 
 export function isLogged() {
 	return !!sessionStorage.loggedUser; // !! converts the value to a boolean true or false
+}
+
+/**
+ * @function deleteUser
+ * @description This function deletes a user by ID.
+ * @param {number} id - The ID of the user to delete.
+ */
+export function deleteUser(id) {
+	console.log("deleteUser -> id", id);
+
+	const index = users.findIndex((user) => user.id === parseInt(id));
+
+	if (index !== -1) {
+		users.splice(index, 1);
+
+		localStorage.setItem("users", JSON.stringify(users));
+	}
+}
+
+export function updateUserStatus(id) {
+	const findUser = users.find((user) => user.id === id);
+
+	if (findUser) {
+		findUser.isBlocked = !findUser.isBlocked;
+
+		localStorage.setItem("users", JSON.stringify(users));
+	}
+}
+
+/**
+ * @function getUserById
+ * @description This function returns an user by id.
+ * @param {number} id - The id of the user.
+ * @returns {object}
+ */
+
+export function getUserById(userId) {
+	return users.find((u) => u.id === userId) || null;
 }

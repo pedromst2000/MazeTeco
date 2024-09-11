@@ -3,6 +3,13 @@ import * as Alumni from "../models/AlumniModel.js";
 import { hero } from "../data/Hero.js";
 import { Faq } from "../data/Faq.js";
 
+/**
+ * @function homeView
+ * @description This function renders the home view.
+ *
+ * @returns {void}
+ */
+
 function homeView() {
 	User.init();
 	Alumni.init();

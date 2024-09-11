@@ -32,7 +32,8 @@
 	text-align: center;
 }
 
-.modal-content p {
+p {
+	font-family: "Oswald", system-ui;
 	font-size: 19px;
 	font-weight: 400;
 }

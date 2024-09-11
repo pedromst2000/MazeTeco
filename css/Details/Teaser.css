@@ -124,9 +124,9 @@ video {
 	border-radius: 20px;
 }
 
-.text-container {
-	font-family: "Oswald", system-ui;
+.text-container p {
 	font-size: 0.98rem;
+	font-family: "Oswald", system-ui;
 	font-weight: 300;
 	letter-spacing: 0.03rem;
 	text-align: justify;

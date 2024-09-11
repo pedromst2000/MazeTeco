@@ -148,9 +148,10 @@ body {
 	border-radius: 20px;
 }
 
-.text-container {
+
+.text-container p {
+	font-size: 0.98rem;
 	font-family: "Oswald", system-ui;
-	font-size: 18px;
 	font-weight: 300;
 	letter-spacing: 0.03rem;
 	text-align: justify;

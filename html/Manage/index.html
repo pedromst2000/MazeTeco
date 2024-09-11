@@ -6,16 +6,67 @@
 		<link rel="icon" href="../assets/svg/Icon.svg" />
 		<title>Activulse - Gestão</title>
 		<link rel="stylesheet" href="../../css/Navbar.css" />
+		<link rel="stylesheet" href="../../css/Manage.css" />
+		<link rel="stylesheet" href="../../css/Modal.css" />
 	</head>
 	<body>
 		<!-- Navbar -->
 		<div id="nav-bar">
 			<!-- injetado via JS -->
 		</div>
-		<h1>Gestão Page</h1>
 
-		<a href="../About.html"></a>
+		<div class="first-row-container">
+			<div class="members-label">
+				<div class="icon">
+					<img src="../../assets/svg/icons/MembersIcon.svg" alt="members" />
+				</div>
+				<div class="label">
+					<span> Membros </span>
+				</div>
+			</div>
+			<div class="options-admin">
+				<div class="add-alumni-btn">
+					<a href="AddAlumni.html">
+						<button>Adicionar Alumni</button>
+					</a>
+				</div>
+				<div class="add-teaser-btn">
+					<a href="AddTeaser.html">
+						<button>Adicionar Teaser</button>
+					</a>
+				</div>
+				<div class="add-poster-btn">
+					<a href="AddPoster.html">
+						<button>Adicionar Poster</button>
+					</a>
+				</div>
+				<div class="add-event-btn">
+					<a href="AddEvent.html">
+						<button>Adicionar Evento</button>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Table  -->
+		<div class="table-container">
+			<table>
+				<thead>
+					<tr>
+						<th class="theading">Username</th>
+						<th class="theading">Membro Desde</th>
+						<th class="theading">Role</th>
+						<th class="theading">Estado</th>
+						<th class="theading">Opções</th>
+					</tr>
+				</thead>
+				<tbody id="members">
+					<!-- injetado via JS -->
+				</tbody>
+			</table>
+		</div>
 
 		<script type="module" src="../../js/views/NavBarView.js"></script>
+		<script type="module" src="../../js/views/ManageView.js"></script>
 	</body>
 </html>
