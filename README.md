@@ -32,6 +32,8 @@ The following project was developed using the following technologies:
 - CSS
 - [JavaScript](https://www.javascript.com/)
 - [Node.js](https://nodejs.org/)
+- [Prettier](https://prettier.io/)
+- [Eslint](https://eslint.org/)
 
 ## :construction_worker_man: Architecture
 
